@@ -21,6 +21,34 @@ nav{position:fixed;top:0;right:0;left:0;z-index:100;background:rgba(253,248,243,
 .nav-links a:hover::after{transform:scaleX(1);}
 .nav-cta{background:var(--wood)!important;color:var(--white)!important;padding:8px 20px!important;border-radius:100px;font-size:13px!important;}
 .nav-cta::after{display:none!important;}
+/* CUSTOM ORDER PAGE */
+.custom-section{background:var(--cream);}
+.custom-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;}
+.custom-info{display:flex;flex-direction:column;gap:20px;}
+.custom-info-card{background:var(--white);border-radius:16px;padding:20px;border:1px solid rgba(200,130,74,.12);display:flex;align-items:flex-start;gap:14px;}
+.custom-info-icon{width:44px;height:44px;background:linear-gradient(135deg,var(--wood-lt),var(--wood));border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;}
+.custom-info-text strong{display:block;font-size:14px;font-weight:700;margin-bottom:4px;}
+.custom-info-text span{font-size:13px;color:var(--muted);}
+.custom-form-card{background:var(--white);border-radius:20px;padding:36px;border:1px solid rgba(200,130,74,.12);box-shadow:0 8px 32px rgba(0,0,0,.06);}
+.custom-form-card h3{font-family:'Tajawal',sans-serif;font-weight:700;font-size:22px;color:var(--ink);margin-bottom:8px;}
+.custom-form-card p{font-size:14px;color:var(--muted);margin-bottom:28px;}
+.custom-form{display:flex;flex-direction:column;gap:18px;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.form-group{display:flex;flex-direction:column;gap:6px;}
+.form-group label{font-size:13px;font-weight:700;color:var(--ink);}
+.form-group label span{color:var(--wood);margin-right:2px;}
+.form-group input,.form-group select,.form-group textarea{background:var(--cream);border:1.5px solid rgba(200,130,74,.2);border-radius:12px;padding:12px 16px;font-family:'Cairo',sans-serif;font-size:14px;color:var(--ink);outline:none;transition:border-color .3s;resize:none;width:100%;}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--wood);background:var(--white);}
+.form-group select{cursor:pointer;}
+.custom-preview{background:rgba(200,130,74,.06);border:1px solid rgba(200,130,74,.2);border-radius:14px;padding:18px;margin-top:4px;}
+.custom-preview h4{font-size:13px;font-weight:700;color:var(--wood-dk);margin-bottom:10px;}
+.preview-text{font-size:13px;color:var(--muted);line-height:1.8;font-family:'Cairo',sans-serif;}
+.custom-optin{background:rgba(37,211,102,.06);border:1px solid rgba(37,211,102,.2);border-radius:12px;padding:14px;}
+.custom-optin label{display:flex;align-items:flex-start;gap:12px;font-size:13px;color:var(--muted);cursor:pointer;line-height:1.6;}
+.custom-optin input[type=checkbox]{width:18px;height:18px;margin-top:2px;accent-color:#25D366;flex-shrink:0;}
+.btn-wa-submit{background:#25D366;color:var(--white);border:none;cursor:pointer;padding:16px;border-radius:14px;font-family:'Cairo',sans-serif;font-size:16px;font-weight:700;transition:all .3s;width:100%;display:flex;align-items:center;justify-content:center;gap:10px;margin-top:4px;}
+.btn-wa-submit:hover{background:#1da851;transform:translateY(-2px);box-shadow:0 8px 24px rgba(37,211,102,.3);}
+@media(max-width:768px){.custom-grid{grid-template-columns:1fr;}.form-row{grid-template-columns:1fr;}}
 .hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:100px 5% 60px;text-align:center;background:radial-gradient(ellipse 80% 60% at 20% 60%,rgba(200,130,74,.12) 0%,transparent 60%),radial-gradient(ellipse 60% 80% at 80% 30%,rgba(122,158,126,.10) 0%,transparent 60%),var(--cream);}
 .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(200,130,74,.12);border:1px solid rgba(200,130,74,.3);border-radius:100px;padding:6px 20px;font-size:13px;font-weight:600;color:var(--wood-dk);margin-bottom:28px;animation:fadeUp .8s ease both;}
 .hero h1{font-family:'Tajawal',sans-serif;font-weight:900;font-size:clamp(36px,6vw,76px);line-height:1.1;margin-bottom:24px;animation:fadeUp .8s .1s ease both;}
@@ -133,6 +161,7 @@ footer{background:var(--ink);padding:48px 5%;text-align:center;position:relative
     <li><a href="#" onclick="showPage('catalog')">المنتجات</a></li>
     <li><a href="#" onclick="showPage('about')">من نحن</a></li>
     <li><a href="#" onclick="showPage('contact')">اتصل بنا</a></li>
+    <li><a href="#" onclick="showPage('custom')">🎨 خصص طلبك</a></li>
     <li><a href="#" onclick="showPage('privacy')">الخصوصية</a></li>
     <li><a href="https://wa.me/213781852377" target="_blank" class="nav-cta">💬 واتساب</a></li>
   </ul>
@@ -169,7 +198,7 @@ footer{background:var(--ink);padding:48px 5%;text-align:center;position:relative
     <div class="optin-banner">💬 للطلب والاستفسار — تواصل معنا على واتساب وسنساعدك في اختيار التصميم المناسب لطفلك</div>
     <div class="catalog-grid">
       <div class="product-card reveal"><div class="product-img img-1">🌙</div><div class="product-info"><span class="product-badge">الأكثر طلباً</span><div class="product-name">لوحة اسم خشبية</div><div class="product-desc">لوحة مع اسم طفلك منقوش بتقنية Laser Cut</div><div class="product-price-note">* السعر يختلف حسب الحجم والتصميم</div><div class="product-footer"><div class="product-price">من 2500 <small>دج تقريباً</small></div><a href="https://wa.me/213781852377?text=مرحباً، أريد الاستفسار عن لوحة الاسم" target="_blank" class="product-btn">💬 اطلب عبر واتساب</a></div></div></div>
-      <div class="product-card reveal"><div class="product-img img-2">🌿</div><div class="product-info"><span class="product-badge">جديد</span><div class="product-name">مصباح و ديكور غرفة الصغير</div><div class="product-desc">إطار خشبي مزخرف بنقوش ليزر رقيقة</div><div class="product-price-note">* السعر يختلف حسب الحجم والتصميم</div><div class="product-footer"><div class="product-price">من 1800 <small>دج تقريباً</small></div><a href="https://wa.me/213781852377?text=مرحباً، أريد الاستفسار عن الإطار الخشبي" target="_blank" class="product-btn">💬 اطلب عبر واتساب</a></div></div></div>
+      <div class="product-card reveal"><div class="product-img img-2">🌿</div><div class="product-info"><span class="product-badge">جديد</span><div class="product-name">إطار صور خشبي</div><div class="product-desc">إطار خشبي مزخرف بنقوش ليزر رقيقة</div><div class="product-price-note">* السعر يختلف حسب الحجم والتصميم</div><div class="product-footer"><div class="product-price">من 1800 <small>دج تقريباً</small></div><a href="https://wa.me/213781852377?text=مرحباً، أريد الاستفسار عن الإطار الخشبي" target="_blank" class="product-btn">💬 اطلب عبر واتساب</a></div></div></div>
       <div class="product-card reveal"><div class="product-img img-3">⭐</div><div class="product-info"><span class="product-badge">مميز</span><div class="product-name">لوحة تعليمية الحروف</div><div class="product-desc">لوحة خشبية تعليمية بالحروف العربية والأرقام</div><div class="product-price-note">* السعر يختلف حسب الحجم والتصميم</div><div class="product-footer"><div class="product-price">من 3200 <small>دج تقريباً</small></div><a href="https://wa.me/213781852377?text=مرحباً، أريد الاستفسار عن اللوحة التعليمية" target="_blank" class="product-btn">💬 اطلب عبر واتساب</a></div></div></div>
       <div class="product-card reveal"><div class="product-img img-4">🦋</div><div class="product-info"><span class="product-badge">هدية مثالية</span><div class="product-name">باقة مواليد</div><div class="product-desc">مجموعة ديكور كاملة للمواليد مخصصة بالاسم والتاريخ</div><div class="product-price-note">* السعر يختلف حسب الحجم والتصميم</div><div class="product-footer"><div class="product-price">من 4500 <small>دج تقريباً</small></div><a href="https://wa.me/213781852377?text=مرحباً، أريد الاستفسار عن باقة المواليد" target="_blank" class="product-btn">💬 اطلب عبر واتساب</a></div></div></div>
       <div class="product-card reveal"><div class="product-img img-5">🏠</div><div class="product-info"><span class="product-badge">شائع</span><div class="product-name">ديكور جدار الغرفة</div><div class="product-desc">مجموعة قطع ديكور متناسقة لتحويل جدار الغرفة</div><div class="product-price-note">* السعر يختلف حسب الحجم والتصميم</div><div class="product-footer"><div class="product-price">من 5000 <small>دج تقريباً</small></div><a href="https://wa.me/213781852377?text=مرحباً، أريد الاستفسار عن ديكور الجدار" target="_blank" class="product-btn">💬 اطلب عبر واتساب</a></div></div></div>
@@ -216,7 +245,7 @@ footer{background:var(--ink);padding:48px 5%;text-align:center;position:relative
       <div class="contact-card reveal">
         <h3>قنوات التواصل</h3>
         <div class="contact-item"><div class="contact-icon ci-wa">💬</div><div class="contact-item-info"><strong>واتساب — للطلبات والدعم</strong><a href="https://wa.me/213781852377" target="_blank">+213 781 85 23 77</a></div></div>
-        <div class="contact-item"><div class="contact-icon ci-mail">📧</div><div class="contact-item-info"><strong>البريد الإلكتروني</strong><a href="mailto:contact@mymazingestore.com">contact@mymazingestore.com</a></div></div>
+        <div class="contact-item"><div class="contact-icon ci-mail">📧</div><div class="contact-item-info"><strong>البريد الإلكتروني</strong><a href="/cdn-cgi/l/email-protection#2c4f4342584d4f586c4155414d5645424b495f58435e49024f4341"><span class="__cf_email__" data-cfemail="ee8d81809a8f8d9aae8397838f948780898b9d9a819c8bc08d8183">[email&#160;protected]</span></a></div></div>
         <div class="contact-item"><div class="contact-icon ci-fb">📘</div><div class="contact-item-info"><strong>فيسبوك</strong><a href="https://facebook.com/Mymazingstore" target="_blank">@Mymazingstore</a></div></div>
         <div class="contact-item"><div class="contact-icon ci-ig">📸</div><div class="contact-item-info"><strong>إنستغرام</strong><a href="https://instagram.com/Mymazingstore" target="_blank">@Mymazingstore</a></div></div>
       </div>
@@ -231,6 +260,99 @@ footer{background:var(--ink);padding:48px 5%;text-align:center;position:relative
           </div>
           <button type="submit" class="form-submit">إرسال الرسالة ✉️</button>
         </form>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- CUSTOM ORDER -->
+<div id="custom" class="page-section">
+  <section class="custom-section">
+    <p class="section-tag">طلب مخصص</p>
+    <h2 class="section-title reveal">خصص طلبك 🎨</h2>
+    <p class="section-sub reveal">أخبرنا بتفاصيل طلبك وسنرسل لك عرض السعر عبر واتساب خلال دقائق.</p>
+    <div class="custom-grid">
+      <div class="custom-info reveal">
+        <div class="custom-info-card">
+          <div class="custom-info-icon">✏️</div>
+          <div class="custom-info-text"><strong>اسم الطفل بالخط العربي</strong><span>ننقش الاسم بدقة عالية بتقنية Laser Cut</span></div>
+        </div>
+        <div class="custom-info-card">
+          <div class="custom-info-icon">🎨</div>
+          <div class="custom-info-text"><strong>خشب طبيعي 100%</strong><span>اللون الطبيعي للخشب يضيف دفئاً وجمالاً</span></div>
+        </div>
+        <div class="custom-info-card">
+          <div class="custom-info-icon">📦</div>
+          <div class="custom-info-text"><strong>تغليف احترافي</strong><span>كل طلب يُغلف بعناية لحمايته أثناء التوصيل</span></div>
+        </div>
+        <div class="custom-info-card">
+          <div class="custom-info-icon">🚚</div>
+          <div class="custom-info-text"><strong>توصيل لكل الجزائر</strong><span>الدفع عند الاستلام — COD عبر ZRexpress</span></div>
+        </div>
+        <div class="custom-info-card">
+          <div class="custom-info-icon">⏱️</div>
+          <div class="custom-info-text"><strong>وقت التحضير</strong><span>3 إلى 5 أيام عمل بعد تأكيد الطلب</span></div>
+        </div>
+      </div>
+      <div class="custom-form-card reveal">
+        <h3>اطلب تصميمك الآن</h3>
+        <p>املأ التفاصيل وسيفتح واتساب برسالة جاهزة ✅</p>
+        <div class="custom-form" id="customForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label>اسمك الكامل <span>*</span></label>
+              <input type="text" id="clientName" placeholder="مثال: فاطمة بن علي" required>
+            </div>
+            <div class="form-group">
+              <label>اسم الطفل <span>*</span></label>
+              <input type="text" id="childName" placeholder="مثال: يوسف" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>نوع المنتج <span>*</span></label>
+            <select id="productType" required>
+              <option value="">— اختر المنتج —</option>
+              <option value="لوحة اسم خشبية">لوحة اسم خشبية</option>
+              <option value="باقة مواليد">باقة مواليد — اسم + تاريخ + تهنئة</option>
+              <option value="ديكور جدار الغرفة">ديكور جدار الغرفة</option>
+              <option value="تصميم حسب الطلب">تصميم حسب الطلب</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>المقاس المطلوب</label>
+              <select id="productSize">
+                <option value="صغير">صغير — 20×15 سم</option>
+                <option value="متوسط" selected>متوسط — 30×20 سم</option>
+                <option value="كبير">كبير — 40×30 سم</option>
+                <option value="حسب الاتفاق">حسب الاتفاق</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>الولاية</label>
+              <input type="text" id="wilaya" placeholder="مثال: الجزائر العاصمة">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>ملاحظات إضافية</label>
+            <textarea id="notes" rows="3" placeholder="أي تفاصيل إضافية — تاريخ الميلاد، رسالة خاصة، أي طلب مخصص..."></textarea>
+          </div>
+          <div class="custom-preview">
+            <h4>📋 معاينة رسالة واتساب</h4>
+            <div class="preview-text" id="previewText">
+              سيظهر هنا ملخص طلبك قبل الإرسال...
+            </div>
+          </div>
+          <div class="custom-optin">
+            <label>
+              <input type="checkbox" id="optinCheck" required>
+              أوافق على تلقي تأكيد طلبي وتحديثات التوصيل عبر واتساب من Mymazing Store
+            </label>
+          </div>
+          <button type="button" class="btn-wa-submit" onclick="sendCustomOrder()">
+            💬 أرسل طلبك عبر واتساب
+          </button>
+        </div>
       </div>
     </div>
   </section>
@@ -280,7 +402,7 @@ footer{background:var(--ink);padding:48px 5%;text-align:center;position:relative
       </ul>
 
       <h3>8. التواصل بخصوص الخصوصية</h3>
-      <p>لأي استفسار: <strong>contact@mymazingestore.com</strong></p>
+      <p>لأي استفسار: <strong><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ceada1a0baafadba8ea3b7a3afb4a7a0a9abbdbaa1bcabe0ada1a3">[email&#160;protected]</a></strong></p>
     </div>
   </section>
 </div>
@@ -293,12 +415,13 @@ footer{background:var(--ink);padding:48px 5%;text-align:center;position:relative
     <a href="#" onclick="showPage('catalog')">المنتجات</a>
     <a href="#" onclick="showPage('about')">من نحن</a>
     <a href="#" onclick="showPage('contact')">اتصل بنا</a>
+    <a href="#" onclick="showPage('custom')">خصص طلبك</a>
     <a href="#" onclick="showPage('privacy')">الخصوصية</a>
   </div>
   <div class="footer-copy">© 2025 Mymazing Store — جميع الحقوق محفوظة</div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 function showPage(id){
   document.querySelectorAll('.page-section').forEach(s=>s.classList.remove('active'));
   const el=document.getElementById(id);
@@ -311,18 +434,53 @@ function toggleMenu(){
   nav.style.display=open?'none':'flex';
   if(!open){Object.assign(nav.style,{flexDirection:'column',position:'absolute',top:'70px',right:'0',left:'0',background:'rgba(253,248,243,0.98)',padding:'20px 5%',borderBottom:'1px solid rgba(200,130,74,.15)'});}
 }
-function revealElements(){
+function updatePreview(){
+  const name=document.getElementById('clientName')?.value||'';
+  const child=document.getElementById('childName')?.value||'';
+  const product=document.getElementById('productType')?.value||'';
+  const size=document.getElementById('productSize')?.value||'متوسط';
+  const wilaya=document.getElementById('wilaya')?.value||'';
+  const notes=document.getElementById('notes')?.value||'';
+  if(!name&&!child&&!product){document.getElementById('previewText').innerHTML='سيظهر هنا ملخص طلبك قبل الإرسال...';return;}
+  let msg=`🛍️ *طلب مخصص — Mymazing Store*\n\n`;
+  if(name) msg+=`👤 الاسم: ${name}\n`;
+  if(child) msg+=`✏️ اسم الطفل: ${child}\n`;
+  if(product) msg+=`📦 المنتج: ${product}\n`;
+  if(size) msg+=`📐 المقاس: ${size}\n`;
+  if(wilaya) msg+=`📍 الولاية: ${wilaya}\n`;
+  if(notes) msg+=`📝 ملاحظات: ${notes}\n`;
+  msg+=`\nأرجو الاطلاع على الطلب وإرسال السعر. شكراً!`;
+  document.getElementById('previewText').innerText=msg;
+}
+function sendCustomOrder(){
+  const name=document.getElementById('clientName')?.value||'';
+  const child=document.getElementById('childName')?.value||'';
+  const product=document.getElementById('productType')?.value||'';
+  const optin=document.getElementById('optinCheck')?.checked;
+  if(!name||!child||!product){alert('يرجى ملء الحقول المطلوبة: اسمك + اسم الطفل + نوع المنتج');return;}
+  if(!optin){alert('يرجى الموافقة على شروط التواصل عبر واتساب');return;}
+  const size=document.getElementById('productSize')?.value||'متوسط';
+  const wilaya=document.getElementById('wilaya')?.value||'';
+  const notes=document.getElementById('notes')?.value||'';
+  let msg=`🛍️ طلب مخصص — Mymazing Store\n\n`;
+  msg+=`👤 الاسم: ${name}\n`;
+  msg+=`✏️ اسم الطفل: ${child}\n`;
+  msg+=`📦 المنتج: ${product}\n`;
+  msg+=`📐 المقاس: ${size}\n`;
+  if(wilaya) msg+=`📍 الولاية: ${wilaya}\n`;
+  if(notes) msg+=`📝 ملاحظات: ${notes}\n`;
+  msg+=`\nأرجو الاطلاع على الطلب وإرسال السعر. شكراً!`;
+  const url=`https://wa.me/213781852377?text=${encodeURIComponent(msg)}`;
+  window.open(url,'_blank');
+}
+document.addEventListener('DOMContentLoaded',()=>{
+  ['clientName','childName','productType','productSize','wilaya','notes'].forEach(id=>{
+    const el=document.getElementById(id);
+    if(el) el.addEventListener('input',updatePreview);
+    if(el && el.tagName==='SELECT') el.addEventListener('change',updatePreview);
+  });
+});
   setTimeout(()=>{document.querySelectorAll('.reveal').forEach(el=>{if(el.getBoundingClientRect().top<window.innerHeight-60)el.classList.add('visible');});},100);
 }
 window.addEventListener('scroll',revealElements);
-document.addEventListener('DOMContentLoaded',revealElements);
-function handleForm(e){
-  e.preventDefault();
-  const btn=e.target.querySelector('.form-submit');
-  btn.textContent='✅ تم الإرسال! سنتواصل معك قريباً';
-  btn.style.background='#15803d';
-  setTimeout(()=>{btn.textContent='إرسال الرسالة ✉️';btn.style.background='';e.target.reset();},3000);
-}
-</script>
-</body>
-</html>
+document.addEventListener('DOMConten
