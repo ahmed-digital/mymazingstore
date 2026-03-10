@@ -49,7 +49,7 @@ nav { position: fixed; top: 52px; right: 0; left: 0; z-index: 100; background: v
 .logo-dot { display: none; }
 .social-icon { width: 30px; height: 30px; background: var(--ink); color: var(--white); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 900; text-decoration: none; transition: background .25s; }
 .social-icon:hover { background: var(--wood); }
-.nav-links { display: flex; gap: 0; list-style: none; align-items: center; height: 100%; }
+.nav-links { display: flex; gap: 0; list-style: none; align-items: center; height: 100%; margin: 0; padding: 0; }
 .nav-links a { font-size: 13px; font-weight: 600; color: var(--muted); text-decoration: none; padding: 0 28px; height: 46px; display: flex; align-items: center; border-left: 1px solid rgba(0,0,0,.06); transition: all .25s; }
 .nav-links li:last-child a { border-left: none; }
 .nav-links a:hover { color: var(--wood-dk); background: rgba(200,130,74,.05); }
@@ -240,53 +240,6 @@ footer { background: var(--ink); padding: 44px 5%; text-align: center; }
 </head>
 <body>
 
-<!-- شريط علوي -->
-<div class="topbar">
-  <div class="topbar-inner">
-    <div class="topbar-text">التوصيل متوفر لجميع الولايات 🚚 الدفع عند الاستلام 💳</div>
-    <div class="topbar-social">
-      <a href="https://facebook.com/Mymazingstore" target="_blank">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
-      </a>
-      <a href="https://instagram.com/Mymazingstore" target="_blank">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-      </a>
-    </div>
-  </div>
-</div>
-
-<!-- شريط علوي -->
-<div class="topbar">
-  <div class="topbar-inner">
-    <div class="topbar-social">
-      <a href="https://facebook.com/Mymazingstore" target="_blank" class="social-btn">f</a>
-      <a href="https://instagram.com/Mymazingstore" target="_blank" class="social-btn">📷</a>
-      <a href="https://wa.me/213791813593" target="_blank" class="social-btn">💬</a>
-    </div>
-    <div class="topbar-links">
-      <a onclick="showPage('about')">من نحن</a>
-      <a onclick="showPage('contact')">اتصل بنا</a>
-      <a onclick="showPage('privacy')">الخصوصية</a>
-    </div>
-  </div>
-</div>
-
-<!-- شريط علوي -->
-<div class="topbar">
-  <div class="topbar-inner">
-    <div class="topbar-social">
-      <a href="https://facebook.com/Mymazingstore" target="_blank" class="social-btn">f</a>
-      <a href="https://instagram.com/Mymazingstore" target="_blank" class="social-btn">📷</a>
-      <a href="https://wa.me/213791813593" target="_blank" class="social-btn">💬</a>
-    </div>
-    <div class="topbar-info">الدفع عند الاستلام — التوصيل لجميع الولايات 🇩🇿</div>
-    <div class="topbar-links">
-      <a onclick="showPage('about')">من نحن</a>
-      <a onclick="showPage('contact')">اتصل بنا</a>
-      <a onclick="showPage('privacy')">الخصوصية</a>
-    </div>
-  </div>
-</div>
 
 <div class="top-bar">
   <div style="display:flex;gap:8px;">
