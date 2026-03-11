@@ -24,10 +24,8 @@ button{font-family:'Cairo',sans-serif;cursor:pointer;border:none;}
 .topbar-logo{font-family:'Tajawal',sans-serif;font-weight:900;font-size:20px;color:var(--wood-dk);direction:ltr;}
 .topbar-logo span{color:var(--wood);}
 .topbar-social{display:flex;gap:8px;}
-.topbar-social a{width:30px;height:30px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:900;color:var(--white);background:var(--ink);transition:background .2s;}
-.topbar-social a:hover{background:var(--wood);}
-.topbar-social a.wa{background:var(--wa);}
-.topbar-social a.wa:hover{background:var(--wa-dk);}
+.topbar-social a{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;transition:transform .2s,opacity .2s;opacity:.9;}
+.topbar-social a:hover{transform:translateY(-2px);opacity:1;}
 
 /* NAVBAR */
 .navbar{position:fixed;top:50px;right:0;left:0;z-index:199;background:var(--white);border-bottom:2px solid rgba(200,130,74,.12);height:46px;display:flex;align-items:center;justify-content:center;}
@@ -64,8 +62,9 @@ button{font-family:'Cairo',sans-serif;cursor:pointer;border:none;}
 .btn-full{width:100%;justify-content:center;}
 
 /* HERO */
-.hero{min-height:calc(100vh - 96px);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:60px 5%;background:radial-gradient(ellipse 70% 50% at 20% 60%,rgba(200,130,74,.08) 0%,transparent 60%),var(--cream);position:relative;overflow:hidden;}
-.hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(200,130,74,.05) 1px,transparent 1px);background-size:30px 30px;pointer-events:none;}
+.hero{min-height:calc(100vh - 96px);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:60px 5%;background:url('images/hero.jpg') center/cover no-repeat, var(--cream);position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:rgba(253,248,242,.82);pointer-events:none;}
+.hero>*{position:relative;z-index:1;}
 .hero-badge{display:inline-flex;align-items:center;gap:7px;background:rgba(200,130,74,.1);border:1px solid rgba(200,130,74,.2);border-radius:100px;padding:5px 16px;font-size:12px;font-weight:700;color:var(--wood-dk);margin-bottom:22px;}
 .hero h1{font-family:'Tajawal',sans-serif;font-weight:900;font-size:clamp(30px,5vw,64px);line-height:1.15;margin-bottom:18px;}
 .hero h1 em{font-style:normal;color:var(--wood);}
@@ -217,9 +216,35 @@ footer{background:var(--ink);padding:40px 5%;text-align:center;}
 <!-- TOP BAR -->
 <div class="topbar">
   <div class="topbar-social">
-    <a href="https://www.facebook.com/Mymazingstore" target="_blank" rel="noopener" aria-label="Facebook">f</a>
-    <a href="https://www.instagram.com/Mymazingstore" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
-    <a href="https://wa.me/213791813593" target="_blank" rel="noopener" class="wa" aria-label="WhatsApp">💬</a>
+    <a href="https://www.facebook.com/Mymazingstore" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="32" height="32" rx="8" fill="#1877F2"/>
+        <path d="M21 16h-3v9h-4v-9h-2v-3h2v-2c0-2.2 1.3-4 4-4h3v3h-2c-.6 0-1 .4-1 1v2h3l-.5 3z" fill="white"/>
+      </svg>
+    </a>
+    <a href="https://www.instagram.com/Mymazingstore" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="32" height="32" rx="8" fill="url(#ig)"/>
+        <rect x="9" y="9" width="14" height="14" rx="4" stroke="white" stroke-width="1.8" fill="none"/>
+        <circle cx="16" cy="16" r="4" stroke="white" stroke-width="1.8" fill="none"/>
+        <circle cx="21" cy="11" r="1" fill="white"/>
+        <defs>
+          <linearGradient id="ig" x1="0" y1="32" x2="32" y2="0" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#FFDC80"/>
+            <stop offset="25%" stop-color="#FCAF45"/>
+            <stop offset="50%" stop-color="#F77737"/>
+            <stop offset="75%" stop-color="#C13584"/>
+            <stop offset="100%" stop-color="#833AB4"/>
+          </linearGradient>
+        </defs>
+      </svg>
+    </a>
+    <a href="https://wa.me/213791813593" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="32" height="32" rx="8" fill="#25D366"/>
+        <path d="M16 7C11 7 7 11 7 16c0 1.6.4 3.1 1.2 4.5L7 25l4.7-1.2C13 24.6 14.5 25 16 25c5 0 9-4 9-9s-4-9-9-9zm4.4 12.5c-.2.5-1 1-1.5 1-.4 0-.8.1-2.5-.5s-2.8-2.2-2.9-2.3c-.1-.1-1-1.3-1-2.5s.6-1.8.9-2c.2-.2.5-.3.7-.3h.5c.2 0 .4.1.5.4l.7 1.8c.1.2 0 .4-.1.6l-.4.5c-.1.1-.2.3-.1.5.4.7.9 1.3 1.5 1.8.5.4 1.1.7 1.7.9.2.1.4 0 .5-.1l.5-.6c.1-.2.3-.2.5-.1l1.8.8c.2.1.3.3.3.5v.6z" fill="white"/>
+      </svg>
+    </a>
   </div>
   <a href="#" class="topbar-logo" onclick="showPage('home');return false;">Mymazing <span>Store</span></a>
 </div>
@@ -273,12 +298,12 @@ footer{background:var(--ink);padding:40px 5%;text-align:center;}
       <h2 class="section-title">الفئات المقترحة</h2>
     </div>
     <div class="cats-grid">
-      <div class="cat-card" onclick="showPage('catalog')"><div class="cat-icon" style="background:linear-gradient(135deg,#fde8d8,#f5c9a0)">🛏️</div><div class="cat-name">غرف الأطفال</div><div class="cat-sub">4 منتجات</div></div>
-      <div class="cat-card" onclick="showPage('custom')"><div class="cat-icon" style="background:linear-gradient(135deg,#d8ecd8,#b0d4b0)">✏️</div><div class="cat-name">ديكور مخصص</div><div class="cat-sub">باسم طفلك</div></div>
-      <div class="cat-card" onclick="showDetail('mawaled')"><div class="cat-icon" style="background:linear-gradient(135deg,#f5d8e8,#e8a8c8)">🎁</div><div class="cat-name">باقات المواليد</div><div class="cat-sub">هدية لا تُنسى</div></div>
-      <div class="cat-card" onclick="showDetail('loha')"><div class="cat-icon" style="background:linear-gradient(135deg,#f5f0d8,#e8d8a0)">🌙</div><div class="cat-name">لوحات الأسماء</div><div class="cat-sub">خشب طبيعي</div></div>
-      <div class="cat-card" onclick="showDetail('dekor')"><div class="cat-icon" style="background:linear-gradient(135deg,#dce8ff,#b0c8f0)">🏠</div><div class="cat-name">ديكور الجدار</div><div class="cat-sub">قطع متناسقة</div></div>
-      <div class="cat-card" onclick="showDetail('masba7')"><div class="cat-icon" style="background:linear-gradient(135deg,#fff8d8,#f5e8a0)">💡</div><div class="cat-name">مصباح الجدار</div><div class="cat-sub">إضاءة مميزة</div></div>
+      <div class="cat-card" onclick="showPage('catalog')"><div class="cat-icon" style="overflow:hidden;padding:0"><img src="images/cat-rooms.jpg" alt="غرف الأطفال" style="width:100%;height:100%;object-fit:cover;border-radius:14px;"></div><div class="cat-name">غرف الأطفال</div><div class="cat-sub">4 منتجات</div></div>
+      <div class="cat-card" onclick="showPage('custom')"><div class="cat-icon" style="overflow:hidden;padding:0"><img src="images/cat-custom.jpg" alt="ديكور مخصص" style="width:100%;height:100%;object-fit:cover;border-radius:14px;"></div><div class="cat-name">ديكور مخصص</div><div class="cat-sub">باسم طفلك</div></div>
+      <div class="cat-card" onclick="showDetail('mawaled')"><div class="cat-icon" style="overflow:hidden;padding:0"><img src="images/cat-mawaled.jpg" alt="باقات المواليد" style="width:100%;height:100%;object-fit:cover;border-radius:14px;"></div><div class="cat-name">باقات المواليد</div><div class="cat-sub">هدية لا تُنسى</div></div>
+      <div class="cat-card" onclick="showDetail('loha')"><div class="cat-icon" style="overflow:hidden;padding:0"><img src="images/cat-loha.jpg" alt="لوحات الأسماء" style="width:100%;height:100%;object-fit:cover;border-radius:14px;"></div><div class="cat-name">لوحات الأسماء</div><div class="cat-sub">خشب طبيعي</div></div>
+      <div class="cat-card" onclick="showDetail('dekor')"><div class="cat-icon" style="overflow:hidden;padding:0"><img src="images/cat-dekor.jpg" alt="ديكور الجدار" style="width:100%;height:100%;object-fit:cover;border-radius:14px;"></div><div class="cat-name">ديكور الجدار</div><div class="cat-sub">قطع متناسقة</div></div>
+      <div class="cat-card" onclick="showDetail('masba7')"><div class="cat-icon" style="overflow:hidden;padding:0"><img src="images/cat-masba7.jpg" alt="مصباح الجدار" style="width:100%;height:100%;object-fit:cover;border-radius:14px;"></div><div class="cat-name">مصباح الجدار</div><div class="cat-sub">إضاءة مميزة</div></div>
     </div>
   </section>
 
@@ -290,15 +315,15 @@ footer{background:var(--ink);padding:40px 5%;text-align:center;}
     </div>
     <div class="products-grid">
       <div class="product-card" onclick="showDetail('loha')">
-        <div class="product-thumb p1"><span class="product-badge">الأكثر طلباً</span>🌙</div>
+        <div class="product-thumb p1"><span class="product-badge">الأكثر طلباً</span><img src="images/loha.jpg" alt="لوحة اسم خشبية" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;"></div>
         <div class="product-body"><div class="product-name">لوحة اسم خشبية</div><div class="product-desc">لوحة منقوشة بالليزر باسم طفلك</div><div class="product-prices"><div class="price-tag">من 1800 دج</div></div><button class="product-btn" onclick="event.stopPropagation();waOrder('لوحة اسم خشبية')">💬 اطلب عبر واتساب</button></div>
       </div>
       <div class="product-card" onclick="showDetail('mawaled')">
-        <div class="product-thumb p2"><span class="product-badge">هدية مثالية</span>🦋</div>
+        <div class="product-thumb p2"><span class="product-badge">هدية مثالية</span><img src="images/mawaled.jpg" alt="باقة مواليد" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;"></div>
         <div class="product-body"><div class="product-name">باقة مواليد</div><div class="product-desc">اسم + تاريخ + لوحة تهنئة</div><div class="product-prices"><div class="price-tag">من 3500 دج</div></div><button class="product-btn" onclick="event.stopPropagation();waOrder('باقة مواليد')">💬 اطلب عبر واتساب</button></div>
       </div>
       <div class="product-card" onclick="showDetail('dekor')">
-        <div class="product-thumb p3"><span class="product-badge">جديد</span>🏠</div>
+        <div class="product-thumb p3"><span class="product-badge">جديد</span><img src="images/dekor.jpg" alt="ديكور جدار الغرفة" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;"></div>
         <div class="product-body"><div class="product-name">ديكور جدار الغرفة</div><div class="product-desc">قطع متناسقة تزين الجدار</div><div class="product-prices"><div class="price-tag">من 4000 دج</div></div><button class="product-btn" onclick="event.stopPropagation();waOrder('ديكور جدار الغرفة')">💬 اطلب عبر واتساب</button></div>
       </div>
     </div>
@@ -318,23 +343,23 @@ footer{background:var(--ink);padding:40px 5%;text-align:center;}
     </div>
     <div class="products-grid">
       <div class="product-card" onclick="showDetail('loha')">
-        <div class="product-thumb p1"><span class="product-badge">الأكثر طلباً</span>🌙</div>
+        <div class="product-thumb p1"><span class="product-badge">الأكثر طلباً</span><img src="images/loha.jpg" alt="لوحة اسم خشبية" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;"></div>
         <div class="product-body"><div class="product-name">لوحة اسم خشبية</div><div class="product-desc">لوحة منقوشة بالليزر باسم طفلك — تزين جدار الغرفة بأناقة</div><div class="product-prices"><div class="price-tag">1800 دج <small>صغير</small></div><div class="price-tag">2500 دج <small>متوسط</small></div><div class="price-tag">3500 دج <small>كبير</small></div></div><button class="product-btn" onclick="event.stopPropagation();waOrder('لوحة اسم خشبية')">💬 اطلب عبر واتساب</button></div>
       </div>
       <div class="product-card" onclick="showDetail('mawaled')">
-        <div class="product-thumb p2"><span class="product-badge">هدية مثالية</span>🦋</div>
+        <div class="product-thumb p2"><span class="product-badge">هدية مثالية</span><img src="images/mawaled.jpg" alt="باقة مواليد" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;"></div>
         <div class="product-body"><div class="product-name">باقة مواليد</div><div class="product-desc">اسم + تاريخ الميلاد + لوحة تهنئة مخصصة</div><div class="product-prices"><div class="price-tag">3500 دج <small>أساسية</small></div><div class="price-tag">5500 دج <small>متكاملة</small></div></div><button class="product-btn" onclick="event.stopPropagation();waOrder('باقة مواليد')">💬 اطلب عبر واتساب</button></div>
       </div>
       <div class="product-card" onclick="showDetail('dekor')">
-        <div class="product-thumb p3"><span class="product-badge">جديد</span>🏠</div>
+        <div class="product-thumb p3"><span class="product-badge">جديد</span><img src="images/dekor.jpg" alt="ديكور جدار الغرفة" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;"></div>
         <div class="product-body"><div class="product-name">ديكور جدار الغرفة</div><div class="product-desc">مجموعة قطع متناسقة تحول الجدار لتحفة فنية</div><div class="product-prices"><div class="price-tag">4000 دج <small>صغير</small></div><div class="price-tag">7000 دج <small>كبير</small></div></div><button class="product-btn" onclick="event.stopPropagation();waOrder('ديكور جدار الغرفة')">💬 اطلب عبر واتساب</button></div>
       </div>
       <div class="product-card" onclick="showDetail('masba7')">
-        <div class="product-thumb p5"><span class="product-badge">جديد</span>💡</div>
+        <div class="product-thumb p5"><span class="product-badge">جديد</span><img src="images/masba7.jpg" alt="مصباح الجدار" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;"></div>
         <div class="product-body"><div class="product-name">مصباح الجدار</div><div class="product-desc">إضاءة خشبية مميزة تضيف دفئاً لغرفة الصغير</div><div class="product-prices"><div class="price-tag">حسب الاتفاق</div></div><button class="product-btn" onclick="event.stopPropagation();waOrder('مصباح الجدار')">💬 اطلب عبر واتساب</button></div>
       </div>
       <div class="product-card" onclick="showDetail('custom-p')">
-        <div class="product-thumb p4"><span class="product-badge">مخصص 100%</span>🎁</div>
+        <div class="product-thumb p4"><span class="product-badge">مخصص 100%</span><img src="images/custom.jpg" alt="تصميم مخصص" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;"></div>
         <div class="product-body"><div class="product-name">تصميم حسب الطلب</div><div class="product-desc">أرسل فكرتك ونحولها لقطعة فنية خشبية مميزة</div><div class="product-prices"><div class="price-tag">حسب التصميم</div></div><button class="product-btn" onclick="event.stopPropagation();showPage('custom')">🎨 خصص طلبك</button></div>
       </div>
     </div>
@@ -422,7 +447,7 @@ footer{background:var(--ink);padding:40px 5%;text-align:center;}
           <div class="stat"><div class="stat-n">COD</div><div class="stat-l">دفع آمن</div></div>
         </div>
       </div>
-      <div class="about-visual">🧸</div>
+      <div class="about-visual" style="overflow:hidden;padding:0;"><img src="images/about.jpg" alt="Mymazing Store" style="width:100%;height:100%;object-fit:cover;border-radius:20px;"></div>
     </div>
   </section>
 </div>
@@ -477,7 +502,7 @@ footer{background:var(--ink);padding:40px 5%;text-align:center;}
       <h3>6. موافقة واتساب — Opt-in</h3>
       <p>بتواصلك معنا توافق على تلقي تحديثات طلبك. يمكنك إلغاء الاشتراك بإرسال "إلغاء" على واتساب في أي وقت.</p>
       <h3>7. التواصل بخصوص الخصوصية</h3>
-      <p>للاستفسارات: <a href="mailto:contact@mymazingstore.com" style="color:var(--wood)">contact@mymazingstore.com</a></p>
+      <p>للاستفسارات: <a href="mailto:contact@mymazingstore.com">contact@mymazingstore.com</a></p>
     </div>
   </section>
 </div>
@@ -521,7 +546,7 @@ function showDetail(key){
   const p=products[key];if(!p)return;
   selSize[key]=0;
   const html=p.sizes.map((s,i)=>`<div class="size-opt ${i===0?'active':''}" onclick="selectSize('${key}',${i},this)"><b>${s.n}</b><small>${s.d}</small><strong>${s.p}</strong></div>`).join('');
-  document.getElementById('detailContent').innerHTML=`<div><div class="detail-visual" style="background:${p.bg}">${p.emoji}</div></div><div><h1>${p.name}</h1><p class="detail-desc">${p.desc}</p><p class="sizes-title">اختر المقاس</p><div class="sizes-grid">${html}</div><div class="detail-note">✏️ جميع المنتجات قابلة للتخصيص باسم الطفل — الخشب الطبيعي هو الخيار الافتراضي</div><button class="btn btn-wa btn-full" onclick="orderDetail('${key}')">💬 اطلب هذا المنتج عبر واتساب</button></div>`;
+  document.getElementById('detailContent').innerHTML=`<div><div class="detail-visual" style="background:${p.bg};overflow:hidden;padding:0;"><img src="images/${key === 'custom-p' ? 'custom' : key}.jpg" alt="${p.name}" style="width:100%;height:100%;object-fit:cover;border-radius:20px;" onerror="this.style.display='none';"></div></div><div><h1>${p.name}</h1><p class="detail-desc">${p.desc}</p><p class="sizes-title">اختر المقاس</p><div class="sizes-grid">${html}</div><div class="detail-note">✏️ جميع المنتجات قابلة للتخصيص باسم الطفل — الخشب الطبيعي هو الخيار الافتراضي</div><button class="btn btn-wa btn-full" onclick="orderDetail('${key}')">💬 اطلب هذا المنتج عبر واتساب</button></div>`;
   showPage('detail');
 }
 
@@ -572,12 +597,4 @@ function sendOrder(){
   const wilaya=document.getElementById('cWilaya').value;
   const notes=document.getElementById('cNotes').value;
   let msg='🛍️ طلب مخصص — Mymazing Store\n';
-  msg+=`👤 الاسم: ${name}\n✏️ اسم الطفل: ${child}\n📦 المنتج: ${product}\n📐 المقاس: ${size}\n`;
-  if(wilaya)msg+=`📍 الولاية: ${wilaya}\n`;
-  if(notes)msg+=`📝 ملاحظات: ${notes}\n`;
-  msg+='\nأرجو تأكيد الطلب وإرسال السعر النهائي.';
-  window.open(`https://wa.me/213791813593?text=${encodeURIComponent(msg)}`,'_blank');
-}
-</script>
-</body>
-</html>
+  msg+=`👤 الاسم: ${name
