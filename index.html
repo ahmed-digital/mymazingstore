@@ -632,4 +632,13 @@ function updatePreview(){
 function sendOrder(){
   const n=document.getElementById('cName').value.trim(),c=document.getElementById('cChild').value.trim(),pr=document.getElementById('cProduct').value,op=document.getElementById('cOptin').checked;
   if(!n||!c||!pr){alert('يرجى ملء: اسمك + اسم الطفل + نوع المنتج');return;}
-  if(!op){al
+  if(!op){alert('يرجى الموافقة على شروط التواصل');return;}
+  const sz=document.getElementById('cSize').value,w=document.getElementById('cWilaya').value,nt=document.getElementById('cNotes').value;
+  let msg=`🛍️ طلب مخصص — Mymazing Store\n👤 الاسم: ${n}\n✏️ اسم الطفل: ${c}\n📦 المنتج: ${pr}\n📐 المقاس: ${sz}\n`;
+  if(w)msg+=`📍 الولاية: ${w}\n`;if(nt)msg+=`📝 ملاحظات: ${nt}\n`;
+  msg+='\nأرجو تأكيد الطلب وإرسال السعر النهائي.';
+  window.open(`https://wa.me/213791813593?text=${encodeURIComponent(msg)}`,'_blank');
+}
+</script>
+</body>
+</html>
