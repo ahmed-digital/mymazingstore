@@ -3,185 +3,230 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Mymazing Store — ديكور غرفة الصغير بمواد طبيعية وآمنة. تصاميم خشبية مخصصة باسم طفلك. توصيل لكل الجزائر مع الدفع عند الاستلام.">
-<title>Mymazing Store — ديكور غرفة الصغير</title>
+
+<!-- SEO -->
+<title>Mymazing Store | ديكور غرف الأطفال بتقنية Laser Cut — الجزائر</title>
+<meta name="description" content="متجر Mymazing Store متخصص في ديكور غرف الأطفال بتقنية Laser Cut. أسماء خشبية، باقات مواليد، ديكور جدار. توصيل لكل الجزائر — الدفع عند الاستلام.">
+<meta name="keywords" content="ديكور اطفال, لوحة اسم خشبية, باقة مواليد, ديكور جزائر, laser cut, mymazing store">
+<meta name="robots" content="index,follow">
+<meta name="author" content="Mymazing Store">
+<meta name="theme-color" content="#c8824a">
+<link rel="icon" href="images/logo.png" type="image/png">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Mymazing Store | ديكور غرف الأطفال">
+<meta property="og:description" content="ديكور غرف الأطفال بتقنية Laser Cut — أسماء خشبية وباقات مواليد. توصيل لكل الجزائر.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mymazingstore.com">
+<meta property="og:image" content="https://mymazingstore.com/images/hero.jpg">
+<meta property="og:locale" content="ar_DZ">
+
+<!-- Schema -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Store","name":"Mymazing Store","url":"https://mymazingstore.com","description":"ديكور غرف الأطفال بتقنية Laser Cut","address":{"@type":"PostalAddress","addressCountry":"DZ"},"contactPoint":{"@type":"ContactPoint","telephone":"+213791813593","contactType":"customer service"}}
+</script>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Tajawal:wght@700;900&display=swap" rel="stylesheet">
+
 <style>
 :root{--cream:#fdf8f2;--warm:#f5ede0;--wood:#c8824a;--wood-dk:#8b5a2b;--wood-lt:#e8b080;--ink:#1a1208;--muted:#6b5c4a;--white:#fff;--wa:#25D366;--wa-dk:#1da851;}
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
 body{font-family:'Cairo',sans-serif;background:var(--cream);color:var(--ink);overflow-x:hidden;}
 a{text-decoration:none;cursor:pointer;}
 ul{list-style:none;}
 button{font-family:'Cairo',sans-serif;cursor:pointer;border:none;}
 img{display:block;max-width:100%;}
 
-/* TOPBAR */
-.topbar{position:fixed;top:0;right:0;left:0;z-index:200;background:var(--white);border-bottom:1px solid rgba(200,130,74,.15);height:52px;display:flex;align-items:center;justify-content:space-between;padding:0 5%;}
-.tlogo{font-family:'Tajawal',sans-serif;font-weight:900;font-size:20px;color:var(--wood-dk);direction:ltr;cursor:pointer;}
-.tlogo span{color:var(--wood);}
-.tsocial{display:flex;gap:8px;align-items:center;}
-.tsocial a{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;transition:transform .2s;opacity:.9;}
-.tsocial a:hover{transform:translateY(-2px);opacity:1;}
-
-/* NAVBAR */
-.navbar{position:fixed;top:52px;right:0;left:0;z-index:199;background:var(--white);border-bottom:2px solid rgba(200,130,74,.12);height:46px;display:flex;align-items:center;justify-content:center;}
-.navbar ul{display:flex;align-items:center;height:100%;}
-.navbar ul li a{display:flex;align-items:center;height:46px;padding:0 18px;font-size:13px;font-weight:700;color:var(--muted);border-left:1px solid rgba(0,0,0,.07);transition:color .2s,background .2s;}
-.navbar ul li:last-child a{border-left:none;}
-.navbar ul li a:hover{color:var(--wood-dk);background:rgba(200,130,74,.05);}
-.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;position:absolute;left:4%;background:none;border:none;}
+/* NAV */
+nav{position:fixed;top:0;right:0;left:0;z-index:200;background:rgba(253,248,242,.97);backdrop-filter:blur(16px);border-bottom:1px solid rgba(200,130,74,.12);height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 5%;}
+.logo{font-family:'Tajawal',sans-serif;font-weight:900;font-size:20px;color:var(--wood-dk);display:flex;align-items:center;gap:8px;}
+.logo-dot{width:8px;height:8px;background:var(--wood);border-radius:50%;}
+.nav-right{display:flex;align-items:center;gap:8px;}
+.nav-links{display:flex;gap:4px;align-items:center;}
+.nav-links a{font-size:13px;font-weight:600;color:var(--muted);padding:7px 13px;border-radius:100px;transition:all .2s;}
+.nav-links a:hover{background:rgba(200,130,74,.1);color:var(--wood-dk);}
+.nav-wa{background:var(--wa)!important;color:var(--white)!important;}
+.nav-wa:hover{background:var(--wa-dk)!important;}
+.nav-social{display:flex;gap:7px;align-items:center;}
+.nav-social a{width:30px;height:30px;border-radius:7px;display:flex;align-items:center;justify-content:center;transition:transform .2s;opacity:.85;}
+.nav-social a:hover{transform:translateY(-2px);opacity:1;}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none;}
 .burger span{width:22px;height:2px;background:var(--ink);border-radius:2px;display:block;}
-.mmenu{display:none;position:fixed;top:98px;right:0;left:0;z-index:198;background:var(--white);border-bottom:1px solid rgba(200,130,74,.15);padding:10px 5%;flex-direction:column;gap:2px;}
+.mmenu{display:none;position:fixed;top:64px;right:0;left:0;z-index:199;background:rgba(253,248,242,.98);border-bottom:1px solid rgba(200,130,74,.15);padding:10px 5%;flex-direction:column;gap:2px;}
 .mmenu a{display:block;padding:10px 14px;font-size:14px;font-weight:700;color:var(--muted);border-radius:8px;}
 .mmenu a:hover{background:rgba(200,130,74,.08);color:var(--wood-dk);}
 .mmenu.open{display:flex;}
 
 /* PAGES */
-.page{display:none;padding-top:98px;min-height:100vh;}
+.page{display:none;padding-top:64px;min-height:100vh;}
 .page.active{display:block;}
 
-/* COMMON */
-.section{padding:52px 5%;}
-.stag{font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--wood);margin-bottom:6px;}
-.stitle{font-family:'Tajawal',sans-serif;font-weight:900;font-size:clamp(22px,3vw,36px);color:var(--ink);margin-bottom:8px;line-height:1.2;}
-.ssub{font-size:14px;color:var(--muted);line-height:1.8;max-width:500px;}
-.shead{margin-bottom:36px;}
+/* SECTION */
+.section{padding:64px 5%;}
+.stag{font-size:11px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--wood);margin-bottom:8px;}
+.stitle{font-family:'Tajawal',sans-serif;font-weight:900;font-size:clamp(24px,3.5vw,40px);color:var(--ink);margin-bottom:10px;line-height:1.2;}
+.ssub{font-size:14px;color:var(--muted);line-height:1.8;max-width:520px;}
+.shead{margin-bottom:44px;}
 .shead.center{text-align:center;}
 .shead.center .ssub{margin:0 auto;}
 
 /* BUTTONS */
-.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 22px;border-radius:100px;font-size:14px;font-weight:700;transition:all .2s;border:none;font-family:'Cairo',sans-serif;cursor:pointer;}
-.btn-wood{background:var(--wood);color:var(--white);box-shadow:0 4px 12px rgba(200,130,74,.3);}
-.btn-wood:hover{background:var(--wood-dk);transform:translateY(-1px);}
-.btn-wa{background:var(--wa);color:var(--white);box-shadow:0 4px 12px rgba(37,211,102,.25);}
-.btn-wa:hover{background:var(--wa-dk);transform:translateY(-1px);}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 26px;border-radius:100px;font-size:14px;font-weight:700;transition:all .25s;border:none;font-family:'Cairo',sans-serif;cursor:pointer;}
+.btn-wood{background:var(--wood);color:var(--white);box-shadow:0 4px 16px rgba(200,130,74,.3);}
+.btn-wood:hover{background:var(--wood-dk);transform:translateY(-2px);}
+.btn-wa{background:var(--wa);color:var(--white);box-shadow:0 4px 16px rgba(37,211,102,.25);}
+.btn-wa:hover{background:var(--wa-dk);transform:translateY(-2px);}
 .btn-outline{background:transparent;color:var(--wood-dk);border:2px solid var(--wood);}
 .btn-outline:hover{background:var(--wood);color:var(--white);}
 .btn-full{width:100%;justify-content:center;}
 
 /* HERO */
-.hero{min-height:calc(100vh - 98px);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:60px 5%;position:relative;overflow:hidden;background:url('images/hero.jpg') center/cover no-repeat,var(--cream);}
-.hero::before{content:'';position:absolute;inset:0;background:rgba(253,248,242,.85);pointer-events:none;}
+.hero{min-height:calc(100vh - 64px);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:60px 5%;position:relative;overflow:hidden;background:url('images/hero.jpg') center/cover no-repeat,var(--cream);}
+.hero::before{content:'';position:absolute;inset:0;background:rgba(253,248,242,.86);pointer-events:none;}
 .hero>*{position:relative;z-index:1;}
-.hero-badge{display:inline-flex;align-items:center;gap:7px;background:rgba(200,130,74,.1);border:1px solid rgba(200,130,74,.2);border-radius:100px;padding:5px 16px;font-size:12px;font-weight:700;color:var(--wood-dk);margin-bottom:20px;}
-.hero h1{font-family:'Tajawal',sans-serif;font-weight:900;font-size:clamp(28px,5vw,62px);line-height:1.15;margin-bottom:16px;}
+.hero-badge{display:inline-flex;align-items:center;gap:7px;background:rgba(200,130,74,.1);border:1px solid rgba(200,130,74,.25);border-radius:100px;padding:5px 18px;font-size:12px;font-weight:700;color:var(--wood-dk);margin-bottom:22px;}
+.hero h1{font-family:'Tajawal',sans-serif;font-weight:900;font-size:clamp(30px,5.5vw,68px);line-height:1.12;margin-bottom:18px;}
 .hero h1 em{font-style:normal;color:var(--wood);}
-.hero-desc{font-size:15px;color:var(--muted);line-height:1.85;max-width:520px;margin:0 auto 28px;}
-.hero-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:40px;}
-.hero-pills{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+.hero-desc{font-size:clamp(14px,1.7vw,16px);color:var(--muted);line-height:1.85;max-width:560px;margin:0 auto 32px;}
+.hero-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:48px;}
+.hero-pills{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;}
 .pill{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--muted);}
-.pill-icon{width:28px;height:28px;background:var(--white);border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:14px;box-shadow:0 2px 6px rgba(0,0,0,.06);}
+.pill-icon{width:30px;height:30px;background:var(--white);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:15px;box-shadow:0 2px 8px rgba(0,0,0,.06);}
+
+/* TRUST BAR */
+.trust-bar{background:var(--ink);padding:16px 5%;display:flex;justify-content:center;gap:36px;flex-wrap:wrap;}
+.trust-item{display:flex;align-items:center;gap:9px;color:rgba(255,255,255,.75);font-size:13px;font-weight:600;}
+.trust-icon{font-size:18px;}
 
 /* CATEGORIES */
-.cats-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;}
+.cats-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;}
 .cat-card{background:var(--cream);border-radius:14px;padding:16px 10px;text-align:center;cursor:pointer;transition:all .25s;border:1px solid rgba(200,130,74,.1);}
-.cat-card:hover{transform:translateY(-3px);box-shadow:0 8px 18px rgba(0,0,0,.08);border-color:var(--wood);}
-.cat-img{width:100%;height:120px;border-radius:10px;object-fit:cover;margin:0 auto 10px;}
+.cat-card:hover{transform:translateY(-4px);box-shadow:0 8px 20px rgba(0,0,0,.08);border-color:var(--wood);}
+.cat-img{width:100%;height:110px;border-radius:10px;object-fit:cover;margin:0 auto 10px;}
 .cat-name{font-size:13px;font-weight:700;color:var(--ink);margin-bottom:2px;}
 .cat-sub{font-size:11px;color:var(--muted);}
 
 /* PRODUCTS */
-.products-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px;}
-.pcard{background:var(--white);border-radius:16px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.05);transition:all .3s;border:1px solid rgba(200,130,74,.08);cursor:pointer;}
-.pcard:hover{transform:translateY(-4px);box-shadow:0 10px 24px rgba(0,0,0,.1);}
-.pthumb{height:180px;position:relative;overflow:hidden;}
+.products-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:20px;}
+.pcard{background:var(--white);border-radius:20px;overflow:hidden;box-shadow:0 2px 14px rgba(0,0,0,.05);transition:all .3s;border:1px solid rgba(200,130,74,.08);cursor:pointer;}
+.pcard:hover{transform:translateY(-5px);box-shadow:0 12px 30px rgba(0,0,0,.1);}
+.pthumb{height:200px;position:relative;overflow:hidden;}
 .pthumb img{width:100%;height:100%;object-fit:cover;transition:transform .3s;}
 .pcard:hover .pthumb img{transform:scale(1.05);}
-.pbadge{position:absolute;top:10px;right:10px;background:var(--wood);color:var(--white);font-size:10px;font-weight:700;padding:3px 10px;border-radius:100px;z-index:1;}
-.pbody{padding:14px;}
-.pname{font-family:'Tajawal',sans-serif;font-weight:700;font-size:16px;margin-bottom:4px;}
-.pdesc{font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:10px;}
-.pprices{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;}
-.ptag{background:rgba(200,130,74,.08);border:1px solid rgba(200,130,74,.15);border-radius:7px;padding:3px 9px;font-size:11px;font-weight:700;color:var(--wood-dk);}
+.pbadge{position:absolute;top:12px;right:12px;background:var(--wood);color:var(--white);font-size:10px;font-weight:700;padding:3px 10px;border-radius:100px;z-index:1;}
+.pbody{padding:16px;}
+.pname{font-family:'Tajawal',sans-serif;font-weight:700;font-size:17px;margin-bottom:5px;}
+.pdesc{font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:12px;}
+.pprices{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px;}
+.ptag{background:rgba(200,130,74,.08);border:1px solid rgba(200,130,74,.15);border-radius:7px;padding:4px 9px;font-size:11px;font-weight:700;color:var(--wood-dk);}
 .ptag small{font-size:10px;color:var(--muted);font-weight:400;}
-.pbtn{display:flex;align-items:center;justify-content:center;gap:6px;width:100%;background:var(--wa);color:var(--white);border:none;border-radius:9px;padding:9px;font-family:'Cairo',sans-serif;font-size:13px;font-weight:700;cursor:pointer;transition:background .2s;}
+.pbtn{display:flex;align-items:center;justify-content:center;gap:6px;width:100%;background:var(--wa);color:var(--white);border:none;border-radius:10px;padding:10px;font-family:'Cairo',sans-serif;font-size:13px;font-weight:700;cursor:pointer;transition:background .2s;}
 .pbtn:hover{background:var(--wa-dk);}
 
+/* REVIEWS */
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.rcard{background:var(--white);border-radius:14px;padding:20px;border:1px solid rgba(200,130,74,.1);}
+.rstars{color:#f59e0b;font-size:14px;margin-bottom:8px;}
+.rtext{font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:12px;}
+.rname{font-size:12px;font-weight:700;color:var(--ink);}
+.rloc{font-size:11px;color:var(--muted);}
+
 /* DETAIL */
-.dback{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:700;color:var(--muted);background:var(--white);border:1px solid rgba(200,130,74,.15);border-radius:100px;padding:6px 16px;margin-bottom:24px;transition:all .2s;cursor:pointer;}
+.dback{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:700;color:var(--muted);background:var(--white);border:1px solid rgba(200,130,74,.15);border-radius:100px;padding:6px 16px;margin-bottom:28px;transition:all .2s;cursor:pointer;}
 .dback:hover{color:var(--wood);border-color:var(--wood);}
-.dgrid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start;}
-.dvisual{border-radius:18px;height:360px;overflow:hidden;position:sticky;top:110px;}
+.dgrid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;}
+.dvisual{border-radius:20px;height:380px;overflow:hidden;position:sticky;top:80px;}
 .dvisual img{width:100%;height:100%;object-fit:cover;}
-.dinfo h1{font-family:'Tajawal',sans-serif;font-weight:900;font-size:28px;margin-bottom:8px;}
-.ddesc{font-size:14px;color:var(--muted);line-height:1.85;margin-bottom:20px;}
-.stitle2{font-size:14px;font-weight:700;margin-bottom:10px;}
-.sgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:18px;}
-.sopt{border:2px solid rgba(200,130,74,.2);border-radius:10px;padding:10px 6px;text-align:center;cursor:pointer;transition:all .2s;background:var(--white);}
+.dinfo h1{font-family:'Tajawal',sans-serif;font-weight:900;font-size:30px;margin-bottom:10px;}
+.ddesc{font-size:14px;color:var(--muted);line-height:1.85;margin-bottom:24px;}
+.stitle2{font-size:14px;font-weight:700;margin-bottom:12px;}
+.sgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-bottom:20px;}
+.sopt{border:2px solid rgba(200,130,74,.2);border-radius:11px;padding:11px 8px;text-align:center;cursor:pointer;transition:all .2s;background:var(--white);}
 .sopt:hover,.sopt.active{border-color:var(--wood);background:rgba(200,130,74,.05);}
 .sopt b{display:block;font-size:12px;margin-bottom:2px;}
-.sopt small{display:block;font-size:10px;color:var(--muted);margin-bottom:3px;}
+.sopt small{display:block;font-size:10px;color:var(--muted);margin-bottom:4px;}
 .sopt strong{display:block;font-size:14px;font-weight:900;color:var(--wood-dk);}
-.dnote{background:rgba(200,130,74,.06);border:1px solid rgba(200,130,74,.15);border-radius:9px;padding:11px 14px;font-size:13px;color:var(--muted);margin-bottom:18px;line-height:1.7;}
+.dnote{background:rgba(200,130,74,.06);border:1px solid rgba(200,130,74,.15);border-radius:10px;padding:12px 16px;font-size:13px;color:var(--muted);margin-bottom:20px;line-height:1.7;}
 
-/* CUSTOM FORM */
-.cgrid{display:grid;grid-template-columns:1fr 1.2fr;gap:40px;align-items:start;}
-.steps{display:flex;flex-direction:column;gap:12px;}
-.step{display:flex;align-items:flex-start;gap:11px;background:var(--white);border-radius:11px;padding:13px;border:1px solid rgba(200,130,74,.1);}
-.snum{width:32px;height:32px;background:var(--wood);color:var(--white);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:900;flex-shrink:0;}
+/* CUSTOM */
+.cgrid{display:grid;grid-template-columns:1fr 1.2fr;gap:44px;align-items:start;}
+.steps{display:flex;flex-direction:column;gap:14px;}
+.step{display:flex;align-items:flex-start;gap:12px;background:var(--white);border-radius:12px;padding:14px;border:1px solid rgba(200,130,74,.1);}
+.snum{width:34px;height:34px;background:var(--wood);color:var(--white);border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:900;flex-shrink:0;}
 .step b{display:block;font-size:13px;margin-bottom:2px;}
 .step span{font-size:12px;color:var(--muted);}
-.fcard{background:var(--white);border-radius:16px;padding:24px;border:1px solid rgba(200,130,74,.1);box-shadow:0 2px 16px rgba(0,0,0,.04);}
-.fcard h3{font-family:'Tajawal',sans-serif;font-weight:700;font-size:17px;margin-bottom:4px;}
-.fcard>p{font-size:13px;color:var(--muted);margin-bottom:18px;}
-.fg{display:flex;flex-direction:column;gap:4px;margin-bottom:12px;}
-.frow{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.fcard{background:var(--white);border-radius:18px;padding:28px;border:1px solid rgba(200,130,74,.1);box-shadow:0 2px 18px rgba(0,0,0,.05);}
+.fcard h3{font-family:'Tajawal',sans-serif;font-weight:700;font-size:18px;margin-bottom:4px;}
+.fcard>p{font-size:13px;color:var(--muted);margin-bottom:20px;}
+.fg{display:flex;flex-direction:column;gap:4px;margin-bottom:13px;}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
 .fg label{font-size:12px;font-weight:700;color:var(--ink);}
 .fg label em{color:var(--wood);font-style:normal;}
-.fg input,.fg select,.fg textarea{background:var(--cream);border:1.5px solid rgba(200,130,74,.18);border-radius:8px;padding:9px 12px;font-family:'Cairo',sans-serif;font-size:13px;color:var(--ink);outline:none;transition:border-color .2s;width:100%;}
+.fg input,.fg select,.fg textarea{background:var(--cream);border:1.5px solid rgba(200,130,74,.18);border-radius:9px;padding:10px 13px;font-family:'Cairo',sans-serif;font-size:13px;color:var(--ink);outline:none;transition:border-color .2s;width:100%;}
 .fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--wood);background:var(--white);}
 .fg textarea{resize:none;}
-.preview{background:rgba(200,130,74,.05);border:1px solid rgba(200,130,74,.15);border-radius:9px;padding:11px;margin-bottom:12px;}
-.preview h4{font-size:12px;font-weight:700;color:var(--wood-dk);margin-bottom:5px;}
+.preview{background:rgba(200,130,74,.05);border:1px solid rgba(200,130,74,.15);border-radius:10px;padding:12px;margin-bottom:13px;}
+.preview h4{font-size:12px;font-weight:700;color:var(--wood-dk);margin-bottom:6px;}
 .preview p{font-size:12px;color:var(--muted);line-height:1.8;white-space:pre-line;}
-.optin{display:flex;align-items:flex-start;gap:9px;font-size:12px;color:var(--muted);cursor:pointer;line-height:1.6;margin-bottom:12px;}
+.optin{display:flex;align-items:flex-start;gap:9px;font-size:12px;color:var(--muted);cursor:pointer;line-height:1.6;margin-bottom:13px;}
 .optin input{width:15px;height:15px;margin-top:2px;accent-color:var(--wa);flex-shrink:0;}
 
 /* ABOUT */
-.agrid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;}
-.avisual{border-radius:18px;height:360px;overflow:hidden;}
+.agrid{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center;}
+.avisual{border-radius:20px;height:380px;overflow:hidden;}
 .avisual img{width:100%;height:100%;object-fit:cover;}
-.atext p{font-size:14px;color:var(--muted);line-height:1.9;margin-bottom:18px;}
-.afeatures{display:flex;flex-direction:column;gap:11px;}
-.feat{display:flex;align-items:flex-start;gap:11px;}
-.ficon{width:34px;height:34px;background:linear-gradient(135deg,var(--wood-lt),var(--wood));border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0;}
+.atext p{font-size:14px;color:var(--muted);line-height:1.9;margin-bottom:20px;}
+.afeatures{display:flex;flex-direction:column;gap:12px;}
+.feat{display:flex;align-items:flex-start;gap:12px;}
+.ficon{width:36px;height:36px;background:linear-gradient(135deg,var(--wood-lt),var(--wood));border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;}
 .feat b{display:block;font-size:13px;margin-bottom:2px;}
 .feat span{font-size:12px;color:var(--muted);}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:24px;}
-.stat{background:var(--white);border-radius:11px;padding:14px;text-align:center;border:1px solid rgba(200,130,74,.1);}
-.stn{font-family:'Tajawal',sans-serif;font-weight:900;font-size:24px;color:var(--wood);}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:28px;}
+.stat{background:var(--white);border-radius:12px;padding:16px;text-align:center;border:1px solid rgba(200,130,74,.1);}
+.stn{font-family:'Tajawal',sans-serif;font-weight:900;font-size:26px;color:var(--wood);}
 .stl{font-size:11px;color:var(--muted);font-weight:600;}
 
 /* CONTACT */
 .cogrid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
-.cocard{background:var(--white);border-radius:14px;padding:22px;border:1px solid rgba(200,130,74,.1);box-shadow:0 2px 10px rgba(0,0,0,.04);}
-.cocard h3{font-family:'Tajawal',sans-serif;font-weight:700;font-size:16px;margin-bottom:16px;}
-.crow{display:flex;align-items:center;gap:11px;padding:10px 0;border-bottom:1px solid rgba(0,0,0,.05);}
+.cocard{background:var(--white);border-radius:16px;padding:24px;border:1px solid rgba(200,130,74,.1);box-shadow:0 2px 12px rgba(0,0,0,.04);}
+.cocard h3{font-family:'Tajawal',sans-serif;font-weight:700;font-size:17px;margin-bottom:18px;}
+.crow{display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:1px solid rgba(0,0,0,.05);}
 .crow:last-child{border-bottom:none;}
-.cicon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;}
+.cicon{width:38px;height:38px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0;}
 .cwa{background:#dcfce7;}.cmail{background:#fde8d8;}.cfb{background:#dce8ff;}.cig{background:#fde0f0;}
 .cinfo strong{display:block;font-size:11px;color:var(--muted);margin-bottom:1px;}
 .cinfo a{font-size:13px;font-weight:600;color:var(--ink);transition:color .2s;}
 .cinfo a:hover{color:var(--wood);}
-.ibox{background:var(--cream);border-radius:9px;padding:12px;margin-bottom:9px;}
+.ibox{background:var(--cream);border-radius:10px;padding:13px;margin-bottom:10px;}
 .ibox strong{display:block;font-size:12px;font-weight:700;margin-bottom:3px;}
 .ibox span{font-size:12px;color:var(--muted);}
 
 /* PRIVACY */
-.pbox{max-width:740px;background:var(--white);border-radius:16px;padding:36px;border:1px solid rgba(200,130,74,.1);}
-.pbox h3{font-family:'Tajawal',sans-serif;font-weight:700;font-size:16px;color:var(--wood-dk);margin:20px 0 7px;}
+.pbox{max-width:760px;background:var(--white);border-radius:18px;padding:40px;border:1px solid rgba(200,130,74,.1);}
+.pbox h3{font-family:'Tajawal',sans-serif;font-weight:700;font-size:16px;color:var(--wood-dk);margin:20px 0 8px;}
 .pbox h3:first-child{margin-top:0;}
-.pbox p{font-size:13px;color:var(--muted);line-height:1.9;margin-bottom:7px;}
-.pbox ul{padding-right:16px;margin-bottom:7px;}
+.pbox p{font-size:13px;color:var(--muted);line-height:1.9;margin-bottom:8px;}
+.pbox ul{padding-right:16px;margin-bottom:8px;}
 .pbox ul li{font-size:13px;color:var(--muted);line-height:1.8;margin-bottom:3px;}
-.wanote{background:rgba(37,211,102,.07);border-right:3px solid var(--wa);border-radius:6px;padding:9px 13px;font-size:12px;color:#15803d;font-weight:600;margin:9px 0;}
+.wanote{background:rgba(37,211,102,.07);border-right:3px solid var(--wa);border-radius:7px;padding:10px 14px;font-size:12px;color:#15803d;font-weight:600;margin:10px 0;}
+
+/* FLOATING WA */
+.wa-float{position:fixed;bottom:22px;left:22px;background:var(--wa);color:var(--white);padding:12px 20px;border-radius:40px;font-weight:700;font-size:13px;box-shadow:0 6px 20px rgba(37,211,102,.4);z-index:999;display:flex;align-items:center;gap:8px;transition:all .25s;}
+.wa-float:hover{background:var(--wa-dk);transform:translateY(-2px);}
 
 /* FOOTER */
-footer{background:var(--ink);padding:36px 5%;text-align:center;}
-.flogo{font-family:'Tajawal',sans-serif;font-weight:900;font-size:19px;color:var(--white);margin-bottom:7px;direction:ltr;display:inline-block;}
+footer{background:var(--ink);padding:40px 5%;text-align:center;}
+.flogo{font-family:'Tajawal',sans-serif;font-weight:900;font-size:20px;color:var(--white);margin-bottom:8px;direction:ltr;display:inline-block;}
 .flogo span{color:var(--wood-lt);}
-.fdesc{font-size:12px;color:rgba(255,255,255,.3);max-width:320px;margin:0 auto 18px;line-height:1.7;}
-.flinks{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:16px;}
+.fdesc{font-size:12px;color:rgba(255,255,255,.3);max-width:340px;margin:0 auto 16px;line-height:1.7;}
+.fsocial{display:flex;gap:10px;justify-content:center;margin-bottom:16px;}
+.fsocial a{width:34px;height:34px;border-radius:8px;display:flex;align-items:center;justify-content:center;opacity:.6;transition:opacity .2s;}
+.fsocial a:hover{opacity:1;}
+.flinks{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:14px;}
 .flinks a{font-size:12px;color:rgba(255,255,255,.4);font-weight:600;transition:color .2s;}
 .flinks a:hover{color:var(--wood-lt);}
 .fcopy{font-size:11px;color:rgba(255,255,255,.18);}
@@ -192,49 +237,51 @@ footer{background:var(--ink);padding:36px 5%;text-align:center;}
   .dgrid,.cgrid,.agrid,.cogrid{grid-template-columns:1fr;}
   .sgrid{grid-template-columns:1fr 1fr;}
   .stats{grid-template-columns:1fr 1fr;}
-  .dvisual,.avisual{height:220px;position:static;}
+  .dvisual,.avisual{height:240px;position:static;}
+  .reviews-grid{grid-template-columns:1fr 1fr;}
 }
-@media(max-width:600px){
-  .navbar{display:none;}
+@media(max-width:768px){
+  .nav-links,.nav-social{display:none;}
   .burger{display:flex;}
   .cats-grid{grid-template-columns:repeat(2,1fr);}
   .frow{grid-template-columns:1fr;}
   .hero-actions{flex-direction:column;align-items:center;}
-  .page{padding-top:52px;}
+  .pbox{padding:22px;}
+  .trust-bar{gap:16px;}
+  .reviews-grid{grid-template-columns:1fr;}
 }
 </style>
 </head>
 <body>
 
-<!-- TOPBAR -->
-<div class="topbar">
-  <div class="tsocial">
-    <a href="https://www.facebook.com/Mymazingstore" target="_blank" rel="noopener" title="Facebook">
-      <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="#1877F2"/><path d="M21 16h-3v9h-4v-9h-2v-3h2v-2c0-2.2 1.3-4 4-4h3v3h-2c-.6 0-1 .4-1 1v2h3l-.5 3z" fill="white"/></svg>
-    </a>
-    <a href="https://www.instagram.com/Mymazingstore" target="_blank" rel="noopener" title="Instagram">
-      <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="url(#ig)"/><rect x="9" y="9" width="14" height="14" rx="4" stroke="white" stroke-width="1.8" fill="none"/><circle cx="16" cy="16" r="4" stroke="white" stroke-width="1.8" fill="none"/><circle cx="21" cy="11" r="1" fill="white"/><defs><linearGradient id="ig" x1="0" y1="32" x2="32" y2="0"><stop offset="0%" stop-color="#FFDC80"/><stop offset="25%" stop-color="#FCAF45"/><stop offset="50%" stop-color="#F77737"/><stop offset="75%" stop-color="#C13584"/><stop offset="100%" stop-color="#833AB4"/></linearGradient></defs></svg>
-    </a>
-    <a href="https://wa.me/213791813593" target="_blank" rel="noopener" title="WhatsApp">
-      <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="#25D366"/><path d="M16 7C11 7 7 11 7 16c0 1.6.4 3.1 1.2 4.5L7 25l4.7-1.2C13 24.6 14.5 25 16 25c5 0 9-4 9-9s-4-9-9-9zm4.4 12.5c-.2.5-1 1-1.5 1-.4 0-.8.1-2.5-.5s-2.8-2.2-2.9-2.3c-.1-.1-1-1.3-1-2.5s.6-1.8.9-2c.2-.2.5-.3.7-.3h.5c.2 0 .4.1.5.4l.7 1.8c.1.2 0 .4-.1.6l-.4.5c-.1.1-.2.3-.1.5.4.7.9 1.3 1.5 1.8.5.4 1.1.7 1.7.9.2.1.4 0 .5-.1l.5-.6c.1-.2.3-.2.5-.1l1.8.8c.2.1.3.3.3.5v.6z" fill="white"/></svg>
-    </a>
+<!-- NAV -->
+<nav>
+  <a href="#" class="logo" onclick="showPage('home');return false;">
+    <div class="logo-dot"></div>
+    Mymazing <span style="color:var(--wood)">Store</span>
+  </a>
+  <div class="nav-right">
+    <div class="nav-social">
+      <a href="https://www.facebook.com/Mymazingstore" target="_blank" rel="noopener" title="Facebook">
+        <svg width="30" height="30" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="7" fill="#1877F2"/><path d="M21 16h-3v9h-4v-9h-2v-3h2v-2c0-2.2 1.3-4 4-4h3v3h-2c-.6 0-1 .4-1 1v2h3l-.5 3z" fill="white"/></svg>
+      </a>
+      <a href="https://www.instagram.com/Mymazingstore" target="_blank" rel="noopener" title="Instagram">
+        <svg width="30" height="30" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="7" fill="url(#ig1)"/><rect x="9" y="9" width="14" height="14" rx="4" stroke="white" stroke-width="1.8" fill="none"/><circle cx="16" cy="16" r="4" stroke="white" stroke-width="1.8" fill="none"/><circle cx="21" cy="11" r="1" fill="white"/><defs><linearGradient id="ig1" x1="0" y1="32" x2="32" y2="0"><stop offset="0%" stop-color="#FFDC80"/><stop offset="50%" stop-color="#F77737"/><stop offset="100%" stop-color="#833AB4"/></linearGradient></defs></svg>
+      </a>
+      <a href="https://wa.me/213791813593" target="_blank" rel="noopener" title="WhatsApp">
+        <svg width="30" height="30" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="7" fill="#25D366"/><path d="M16 7C11 7 7 11 7 16c0 1.6.4 3.1 1.2 4.5L7 25l4.7-1.2C13 24.6 14.5 25 16 25c5 0 9-4 9-9s-4-9-9-9zm4.4 12.5c-.2.5-1 1-1.5 1-.4 0-.8.1-2.5-.5s-2.8-2.2-2.9-2.3c-.1-.1-1-1.3-1-2.5s.6-1.8.9-2c.2-.2.5-.3.7-.3h.5c.2 0 .4.1.5.4l.7 1.8c.1.2 0 .4-.1.6l-.4.5c-.1.1-.2.3-.1.5.4.7.9 1.3 1.5 1.8.5.4 1.1.7 1.7.9.2.1.4 0 .5-.1l.5-.6c.1-.2.3-.2.5-.1l1.8.8c.2.1.3.3.3.5v.6z" fill="white"/></svg>
+      </a>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#" onclick="showPage('home');return false;">الرئيسية</a></li>
+      <li><a href="#" onclick="showPage('catalog');return false;">المنتجات</a></li>
+      <li><a href="#" onclick="showPage('custom');return false;">🎨 خصص طلبك</a></li>
+      <li><a href="#" onclick="showPage('about');return false;">من نحن</a></li>
+      <li><a href="#" onclick="showPage('contact');return false;">اتصل بنا</a></li>
+      <li><a href="https://wa.me/213791813593?text=مرحباً%20أريد%20الاستفسار" target="_blank" rel="noopener" class="nav-wa">💬 واتساب</a></li>
+    </ul>
+    <button class="burger" onclick="toggleMenu()" aria-label="قائمة"><span></span><span></span><span></span></button>
   </div>
-  <a href="#" class="tlogo" onclick="showPage('home');return false;">Mymazing <span>Store</span></a>
-</div>
-
-<!-- NAVBAR -->
-<nav class="navbar">
-  <ul>
-    <li><a href="#" onclick="showPage('home');return false;">الرئيسية</a></li>
-    <li><a href="#" onclick="showPage('catalog');return false;">المنتجات</a></li>
-    <li><a href="#" onclick="showPage('custom');return false;">🎨 خصص طلبك</a></li>
-    <li><a href="#" onclick="showPage('about');return false;">من نحن</a></li>
-    <li><a href="#" onclick="showPage('contact');return false;">اتصل بنا</a></li>
-    <li><a href="#" onclick="showPage('privacy');return false;">الخصوصية</a></li>
-  </ul>
-  <button class="burger" onclick="toggleMenu()" aria-label="قائمة">
-    <span></span><span></span><span></span>
-  </button>
 </nav>
 
 <!-- MOBILE MENU -->
@@ -245,15 +292,21 @@ footer{background:var(--ink);padding:36px 5%;text-align:center;}
   <a href="#" onclick="showPage('about');toggleMenu();return false;">من نحن</a>
   <a href="#" onclick="showPage('contact');toggleMenu();return false;">اتصل بنا</a>
   <a href="#" onclick="showPage('privacy');toggleMenu();return false;">الخصوصية</a>
+  <a href="https://wa.me/213791813593" target="_blank" rel="noopener" style="background:var(--wa);color:var(--white);border-radius:8px;text-align:center;margin-top:4px;">💬 واتساب</a>
 </div>
+
+<!-- FLOATING WA BUTTON -->
+<a href="https://wa.me/213791813593?text=مرحباً%20أريد%20الاستفسار%20عن%20منتجاتكم" target="_blank" rel="noopener" class="wa-float">
+  <svg width="18" height="18" viewBox="0 0 32 32" fill="none"><path d="M16 3C9 3 3 9 3 16c0 2.3.6 4.5 1.7 6.4L3 29l6.8-1.7C11.6 28.4 13.8 29 16 29c7 0 13-6 13-13S23 3 16 3zm6.2 18c-.3.8-1.5 1.4-2.2 1.5-.6.1-1.3.1-3.6-.7-2.4-.9-4-3.2-4.2-3.4-.1-.1-1.4-1.9-1.4-3.6s.9-2.6 1.3-2.9c.3-.3.7-.4 1-.4h.7c.3 0 .6.1.8.6l1 2.6c.1.3.1.6-.1.8l-.6.7c-.2.2-.3.4-.1.7.6 1 1.3 1.9 2.1 2.6.7.6 1.6 1 2.5 1.3.3.1.6 0 .8-.2l.7-.9c.2-.3.5-.3.8-.2l2.6 1.2c.3.1.5.4.5.7v.9z" fill="white"/></svg>
+  اطلب عبر واتساب
+</a>
 
 <!-- ═══ HOME ═══ -->
 <div id="home" class="page active">
 
-  <!-- Hero -->
   <section class="hero">
     <div class="hero-badge">🇩🇿 صنع بحب في الجزائر</div>
-    <h1>ديكور غرفة الصغير<br><em>بمواد طبيعية وآمنة</em></h1>
+    <h1>ديكور <em>غرف الأطفال</em><br>بتقنية Laser Cut</h1>
     <p class="hero-desc">تصاميم خشبية مخصصة تحمل اسم طفلك — بأسعار واضحة وتوصيل لكل ولايات الجزائر مع الدفع عند الاستلام.</p>
     <div class="hero-actions">
       <a href="#" class="btn btn-wood" onclick="showPage('catalog');return false;">🛍️ اكتشف المنتجات</a>
@@ -261,11 +314,20 @@ footer{background:var(--ink);padding:36px 5%;text-align:center;}
       <a href="https://wa.me/213791813593?text=مرحباً%20أريد%20الاستفسار%20عن%20منتجاتكم" target="_blank" rel="noopener" class="btn btn-outline">💬 تواصل معنا</a>
     </div>
     <div class="hero-pills">
-      <div class="pill"><div class="pill-icon">✏️</div>يمكن كتابة اسم صغيرك</div>
-      <div class="pill"><div class="pill-icon">🚚</div>التوصيل لجميع الولايات</div>
-      <div class="pill"><div class="pill-icon">💳</div>الدفع عند الاستلام</div>
+      <div class="pill"><div class="pill-icon">✂️</div>Laser Cut CO2</div>
+      <div class="pill"><div class="pill-icon">✏️</div>اسم الطفل</div>
+      <div class="pill"><div class="pill-icon">🚚</div>58 ولاية</div>
+      <div class="pill"><div class="pill-icon">💳</div>COD</div>
     </div>
   </section>
+
+  <!-- Trust Bar -->
+  <div class="trust-bar">
+    <div class="trust-item"><span class="trust-icon">✅</span>جودة مضمونة 100%</div>
+    <div class="trust-item"><span class="trust-icon">🚚</span>توصيل لكل الجزائر</div>
+    <div class="trust-item"><span class="trust-icon">💳</span>الدفع عند الاستلام</div>
+    <div class="trust-item"><span class="trust-icon">✏️</span>تخصيص باسم طفلك</div>
+  </div>
 
   <!-- Categories -->
   <section class="section" style="background:var(--white);">
@@ -275,27 +337,27 @@ footer{background:var(--ink);padding:36px 5%;text-align:center;}
     </div>
     <div class="cats-grid">
       <div class="cat-card" onclick="showPage('catalog')">
-        <img class="cat-img" src="images/cat-rooms.jpg" alt="غرف الأطفال">
+        <img class="cat-img" src="images/cat-rooms.jpg" alt="ديكور غرف الأطفال الجزائر" loading="lazy">
         <div class="cat-name">غرف الأطفال</div><div class="cat-sub">4 منتجات</div>
       </div>
       <div class="cat-card" onclick="showPage('custom')">
-        <img class="cat-img" src="images/cat-custom.jpg" alt="ديكور مخصص">
+        <img class="cat-img" src="images/cat-custom.jpg" alt="ديكور مخصص باسم الطفل" loading="lazy">
         <div class="cat-name">ديكور مخصص</div><div class="cat-sub">باسم طفلك</div>
       </div>
       <div class="cat-card" onclick="showDetail('mawaled')">
-        <img class="cat-img" src="images/cat-mawaled.jpg" alt="باقات المواليد">
+        <img class="cat-img" src="images/cat-mawaled.jpg" alt="باقات هدايا المواليد" loading="lazy">
         <div class="cat-name">باقات المواليد</div><div class="cat-sub">هدية لا تُنسى</div>
       </div>
       <div class="cat-card" onclick="showDetail('loha')">
-        <img class="cat-img" src="images/cat-loha.jpg" alt="لوحات الأسماء">
+        <img class="cat-img" src="images/cat-loha.jpg" alt="لوحات الأسماء الخشبية" loading="lazy">
         <div class="cat-name">لوحات الأسماء</div><div class="cat-sub">خشب طبيعي</div>
       </div>
       <div class="cat-card" onclick="showDetail('dekor')">
-        <img class="cat-img" src="images/cat-dekor.jpg" alt="ديكور الجدار">
+        <img class="cat-img" src="images/cat-dekor.jpg" alt="ديكور جدار غرفة اطفال" loading="lazy">
         <div class="cat-name">ديكور الجدار</div><div class="cat-sub">قطع متناسقة</div>
       </div>
       <div class="cat-card" onclick="showDetail('masba7')">
-        <img class="cat-img" src="images/cat-masba7.jpg" alt="مصباح الجدار">
+        <img class="cat-img" src="images/cat-masba7.jpg" alt="مصباح جدار خشبي" loading="lazy">
         <div class="cat-name">مصباح الجدار</div><div class="cat-sub">إضاءة مميزة</div>
       </div>
     </div>
@@ -310,20 +372,33 @@ footer{background:var(--ink);padding:36px 5%;text-align:center;}
     </div>
     <div class="products-grid">
       <div class="pcard" onclick="showDetail('loha')">
-        <div class="pthumb"><span class="pbadge">الأكثر طلباً</span><img src="images/loha.jpg" alt="لوحة اسم خشبية" loading="lazy"></div>
+        <div class="pthumb"><span class="pbadge">الأكثر طلباً</span><img src="images/loha.jpg" alt="لوحة اسم خشبية بالليزر" loading="lazy"></div>
         <div class="pbody"><div class="pname">لوحة اسم خشبية</div><div class="pdesc">لوحة منقوشة بالليزر باسم طفلك</div><div class="pprices"><span class="ptag">من 1800 دج</span></div><button class="pbtn" onclick="event.stopPropagation();waOrder('لوحة اسم خشبية')">💬 اطلب عبر واتساب</button></div>
       </div>
       <div class="pcard" onclick="showDetail('mawaled')">
-        <div class="pthumb"><span class="pbadge">هدية مثالية</span><img src="images/mawaled.jpg" alt="باقة مواليد" loading="lazy"></div>
+        <div class="pthumb"><span class="pbadge">هدية مثالية</span><img src="images/mawaled.jpg" alt="باقة مواليد خشبية" loading="lazy"></div>
         <div class="pbody"><div class="pname">باقة مواليد</div><div class="pdesc">اسم + تاريخ + لوحة تهنئة</div><div class="pprices"><span class="ptag">من 3500 دج</span></div><button class="pbtn" onclick="event.stopPropagation();waOrder('باقة مواليد')">💬 اطلب عبر واتساب</button></div>
       </div>
       <div class="pcard" onclick="showDetail('dekor')">
-        <div class="pthumb"><span class="pbadge">جديد</span><img src="images/dekor.jpg" alt="ديكور جدار الغرفة" loading="lazy"></div>
+        <div class="pthumb"><span class="pbadge">جديد</span><img src="images/dekor.jpg" alt="ديكور جدار غرفة اطفال" loading="lazy"></div>
         <div class="pbody"><div class="pname">ديكور جدار الغرفة</div><div class="pdesc">قطع متناسقة تزين الجدار</div><div class="pprices"><span class="ptag">من 4000 دج</span></div><button class="pbtn" onclick="event.stopPropagation();waOrder('ديكور جدار الغرفة')">💬 اطلب عبر واتساب</button></div>
       </div>
     </div>
     <div style="text-align:center;margin-top:28px;">
       <a href="#" class="btn btn-wood" onclick="showPage('catalog');return false;">🛍️ عرض كل المنتجات</a>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="section" style="background:var(--white);">
+    <div class="shead center">
+      <p class="stag">آراء العملاء</p>
+      <h2 class="stitle">ماذا يقول عملاؤنا</h2>
+    </div>
+    <div class="reviews-grid">
+      <div class="rcard"><div class="rstars">★★★★★</div><p class="rtext">لوحة جميلة جداً، النقش دقيق واسم ابني طلع رائع. التوصيل كان سريع والتغليف محترم.</p><div class="rname">أم يوسف</div><div class="rloc">الجزائر العاصمة</div></div>
+      <div class="rcard"><div class="rstars">★★★★★</div><p class="rtext">باقة المواليد أهديتها لأختي وكانت سعيدة جداً. القطعة فريدة ومميزة وتستحق ثمنها.</p><div class="rname">سارة م.</div><div class="rloc">وهران</div></div>
+      <div class="rcard"><div class="rstars">★★★★★</div><p class="rtext">الخدمة ممتازة، ردوا بسرعة على واتساب وشرحوا كل شيء. المنتج وصل سليماً.</p><div class="rname">رضا ب.</div><div class="rloc">قسنطينة</div></div>
     </div>
   </section>
 
@@ -339,24 +414,24 @@ footer{background:var(--ink);padding:36px 5%;text-align:center;}
     </div>
     <div class="products-grid">
       <div class="pcard" onclick="showDetail('loha')">
-        <div class="pthumb"><span class="pbadge">الأكثر طلباً</span><img src="images/loha.jpg" alt="لوحة اسم خشبية" loading="lazy"></div>
+        <div class="pthumb"><span class="pbadge">الأكثر طلباً</span><img src="images/loha.jpg" alt="لوحة اسم خشبية بالليزر" loading="lazy"></div>
         <div class="pbody"><div class="pname">لوحة اسم خشبية</div><div class="pdesc">لوحة منقوشة بالليزر باسم طفلك</div><div class="pprices"><span class="ptag">1800 دج <small>صغير</small></span><span class="ptag">2500 دج <small>متوسط</small></span><span class="ptag">3500 دج <small>كبير</small></span></div><button class="pbtn" onclick="event.stopPropagation();waOrder('لوحة اسم خشبية')">💬 اطلب عبر واتساب</button></div>
       </div>
       <div class="pcard" onclick="showDetail('mawaled')">
-        <div class="pthumb"><span class="pbadge">هدية مثالية</span><img src="images/mawaled.jpg" alt="باقة مواليد" loading="lazy"></div>
-        <div class="pbody"><div class="pname">باقة مواليد</div><div class="pdesc">اسم + تاريخ الميلاد + لوحة تهنئة مخصصة</div><div class="pprices"><span class="ptag">3500 دج <small>أساسية</small></span><span class="ptag">5500 دج <small>متكاملة</small></span></div><button class="pbtn" onclick="event.stopPropagation();waOrder('باقة مواليد')">💬 اطلب عبر واتساب</button></div>
+        <div class="pthumb"><span class="pbadge">هدية مثالية</span><img src="images/mawaled.jpg" alt="باقة مواليد خشبية" loading="lazy"></div>
+        <div class="pbody"><div class="pname">باقة مواليد</div><div class="pdesc">اسم + تاريخ الميلاد + لوحة تهنئة</div><div class="pprices"><span class="ptag">3500 دج <small>أساسية</small></span><span class="ptag">5500 دج <small>متكاملة</small></span></div><button class="pbtn" onclick="event.stopPropagation();waOrder('باقة مواليد')">💬 اطلب عبر واتساب</button></div>
       </div>
       <div class="pcard" onclick="showDetail('dekor')">
-        <div class="pthumb"><span class="pbadge">جديد</span><img src="images/dekor.jpg" alt="ديكور جدار الغرفة" loading="lazy"></div>
+        <div class="pthumb"><span class="pbadge">جديد</span><img src="images/dekor.jpg" alt="ديكور جدار غرفة اطفال" loading="lazy"></div>
         <div class="pbody"><div class="pname">ديكور جدار الغرفة</div><div class="pdesc">مجموعة قطع متناسقة تحول الجدار لتحفة فنية</div><div class="pprices"><span class="ptag">4000 دج <small>صغير</small></span><span class="ptag">7000 دج <small>كبير</small></span></div><button class="pbtn" onclick="event.stopPropagation();waOrder('ديكور جدار الغرفة')">💬 اطلب عبر واتساب</button></div>
       </div>
       <div class="pcard" onclick="showDetail('masba7')">
-        <div class="pthumb"><span class="pbadge">جديد</span><img src="images/masba7.jpg" alt="مصباح الجدار" loading="lazy"></div>
+        <div class="pthumb"><span class="pbadge">جديد</span><img src="images/masba7.jpg" alt="مصباح جدار خشبي" loading="lazy"></div>
         <div class="pbody"><div class="pname">مصباح الجدار</div><div class="pdesc">إضاءة خشبية مميزة تضيف دفئاً لغرفة الصغير</div><div class="pprices"><span class="ptag">حسب الاتفاق</span></div><button class="pbtn" onclick="event.stopPropagation();waOrder('مصباح الجدار')">💬 اطلب عبر واتساب</button></div>
       </div>
       <div class="pcard" onclick="showDetail('custom-p')">
-        <div class="pthumb"><span class="pbadge">مخصص 100%</span><img src="images/custom.jpg" alt="تصميم مخصص" loading="lazy"></div>
-        <div class="pbody"><div class="pname">تصميم حسب الطلب</div><div class="pdesc">أرسل فكرتك ونحولها لقطعة فنية خشبية مميزة</div><div class="pprices"><span class="ptag">حسب التصميم</span></div><button class="pbtn" onclick="event.stopPropagation();showPage('custom')">🎨 خصص طلبك</button></div>
+        <div class="pthumb"><span class="pbadge">مخصص 100%</span><img src="images/custom.jpg" alt="تصميم مخصص حسب الطلب" loading="lazy"></div>
+        <div class="pbody"><div class="pname">تصميم حسب الطلب</div><div class="pdesc">أرسل فكرتك ونحولها لقطعة فنية خشبية</div><div class="pprices"><span class="ptag">حسب التصميم</span></div><button class="pbtn" onclick="event.stopPropagation();showPage('custom')">🎨 خصص طلبك</button></div>
       </div>
     </div>
   </section>
@@ -381,7 +456,7 @@ footer{background:var(--ink);padding:36px 5%;text-align:center;}
     <div class="cgrid">
       <div class="steps">
         <div class="step"><div class="snum">1</div><div><b>اختر المنتج والمقاس</b><span>حدد نوع المنتج والحجم المناسب</span></div></div>
-        <div class="step"><div class="snum">2</div><div><b>أدخل اسم الطفل</b><span>ننقش الاسم بخط جميل</span></div></div>
+        <div class="step"><div class="snum">2</div><div><b>أدخل اسم الطفل</b><span>ننقش الاسم بخط جميل بالليزر</span></div></div>
         <div class="step"><div class="snum">3</div><div><b>أرسل عبر واتساب</b><span>رسالة جاهزة بكل التفاصيل</span></div></div>
         <div class="step"><div class="snum">4</div><div><b>نؤكد ونبدأ التحضير</b><span>3-5 أيام عمل ثم توصيل COD</span></div></div>
       </div>
@@ -395,10 +470,8 @@ footer{background:var(--ink);padding:36px 5%;text-align:center;}
         <div class="fg"><label>نوع المنتج <em>*</em></label>
           <select id="cProduct" onchange="updatePreview()">
             <option value="">— اختر المنتج —</option>
-            <option>لوحة اسم خشبية</option>
-            <option>باقة مواليد</option>
-            <option>ديكور جدار الغرفة</option>
-            <option>مصباح الجدار</option>
+            <option>لوحة اسم خشبية</option><option>باقة مواليد</option>
+            <option>ديكور جدار الغرفة</option><option>مصباح الجدار</option>
             <option>تصميم حسب الطلب</option>
           </select>
         </div>
@@ -426,9 +499,9 @@ footer{background:var(--ink);padding:36px 5%;text-align:center;}
       <div>
         <p class="stag">من نحن</p>
         <h2 class="stitle">نصنع الجمال<br>بدقة الليزر</h2>
-        <div class="atext"><p>Mymazing Store متجر جزائري متخصص في ديكور غرف الأطفال. نؤمن أن كل طفل يستحق غرفة تعكس شخصيته وتحمل اسمه بفخر.</p></div>
+        <div class="atext"><p>Mymazing Store متجر جزائري متخصص في ديكور غرف الأطفال بتقنية Laser Cut CO2. نؤمن أن كل طفل يستحق غرفة تعكس شخصيته وتحمل اسمه بفخر.</p></div>
         <div class="afeatures">
-          <div class="feat"><div class="ficon">✂️</div><div><b>تقنية Laser Cut</b><span>دقة عالية في كل تفصيل صغير</span></div></div>
+          <div class="feat"><div class="ficon">✂️</div><div><b>تقنية Laser Cut CO2</b><span>دقة عالية في كل تفصيل صغير</span></div></div>
           <div class="feat"><div class="ficon">🌿</div><div><b>خشب طبيعي 100%</b><span>مواد آمنة وعالية الجودة</span></div></div>
           <div class="feat"><div class="ficon">✏️</div><div><b>تخصيص كامل</b><span>كل قطعة تحمل اسم طفلك</span></div></div>
           <div class="feat"><div class="ficon">🚚</div><div><b>توصيل COD لكل الجزائر</b><span>الدفع عند الاستلام</span></div></div>
@@ -440,7 +513,7 @@ footer{background:var(--ink);padding:36px 5%;text-align:center;}
           <div class="stat"><div class="stn">COD</div><div class="stl">دفع آمن</div></div>
         </div>
       </div>
-      <div class="avisual"><img src="images/about.jpg" alt="Mymazing Store"></div>
+      <div class="avisual"><img src="images/about.jpg" alt="Mymazing Store ديكور اطفال جزائر" loading="lazy"></div>
     </div>
   </section>
 </div>
@@ -451,15 +524,15 @@ footer{background:var(--ink);padding:36px 5%;text-align:center;}
     <div class="shead">
       <p class="stag">تواصل معنا</p>
       <h2 class="stitle">نحن هنا لمساعدتك</h2>
-      <p class="ssub">للطلب أو الاستفسار تواصل معنا عبر أي قناة</p>
+      <p class="ssub">للطلب أو الاستفسار تواصل معنا عبر أي قناة تفضلها</p>
     </div>
     <div class="cogrid">
       <div class="cocard">
         <h3>قنوات التواصل</h3>
-        <div class="crow"><div class="cicon cwa">💬</div><div class="cinfo"><strong>واتساب</strong><a href="https://wa.me/213791813593" target="_blank" rel="noopener">+213 791 81 35 93</a></div></div>
-        <div class="crow"><div class="cicon cmail">📧</div><div class="cinfo"><strong>البريد الإلكتروني</strong><a href="/cdn-cgi/l/email-protection#b5d6dadbc1d4d6c1f5d8ccd8d4cfdcdbd2c6c1dac7d09bd6dad8"><span class="__cf_email__" data-cfemail="dcbfb3b2a8bdbfa89cb1a5b1bda6b5b2bbafa8b3aeb9f2bfb3b1">[email&#160;protected]</span></a></div></div>
-        <div class="crow"><div class="cicon cfb">📘</div><div class="cinfo"><strong>فيسبوك</strong><a href="https://www.facebook.com/Mymazingstore" target="_blank" rel="noopener">@Mymazingstore</a></div></div>
-        <div class="crow"><div class="cicon cig">📸</div><div class="cinfo"><strong>إنستغرام</strong><a href="https://www.instagram.com/Mymazingstore" target="_blank" rel="noopener">@Mymazingstore</a></div></div>
+        <div class="crow"><div class="cicon cwa"><svg width="22" height="22" viewBox="0 0 32 32" fill="none"><path d="M16 3C9 3 3 9 3 16c0 2.3.6 4.5 1.7 6.4L3 29l6.8-1.7C11.6 28.4 13.8 29 16 29c7 0 13-6 13-13S23 3 16 3zm6.2 18c-.3.8-1.5 1.4-2.2 1.5-.6.1-1.3.1-3.6-.7-2.4-.9-4-3.2-4.2-3.4-.1-.1-1.4-1.9-1.4-3.6s.9-2.6 1.3-2.9c.3-.3.7-.4 1-.4h.7c.3 0 .6.1.8.6l1 2.6c.1.3.1.6-.1.8l-.6.7c-.2.2-.3.4-.1.7.6 1 1.3 1.9 2.1 2.6.7.6 1.6 1 2.5 1.3.3.1.6 0 .8-.2l.7-.9c.2-.3.5-.3.8-.2l2.6 1.2c.3.1.5.4.5.7v.9z" fill="#25D366"/></svg></div><div class="cinfo"><strong>واتساب</strong><a href="https://wa.me/213791813593" target="_blank" rel="noopener">+213 791 81 35 93</a></div></div>
+        <div class="crow"><div class="cicon cmail"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="2" y="4" width="20" height="16" rx="3" stroke="#c8824a" stroke-width="1.8" fill="none"/><path d="M2 7l10 7 10-7" stroke="#c8824a" stroke-width="1.8" stroke-linecap="round"/></svg></div><div class="cinfo"><strong>البريد الإلكتروني</strong><a href="mailto:contact@mymazingstore.com">contact@mymazingstore.com</a></div></div>
+        <div class="crow"><div class="cicon cfb"><svg width="22" height="22" viewBox="0 0 32 32" fill="none"><path d="M29 16c0-7.2-5.8-13-13-13S3 8.8 3 16c0 6.5 4.8 11.9 11 12.9V20h-3v-4h3v-3c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2V11h-1.5c-1.5 0-2 .9-2 1.9V16h3.4l-.5 4H18v8.9C24.2 27.9 29 22.5 29 16z" fill="#1877F2"/></svg></div><div class="cinfo"><strong>فيسبوك</strong><a href="https://www.facebook.com/Mymazingstore" target="_blank" rel="noopener">@Mymazingstore</a></div></div>
+        <div class="crow"><div class="cicon cig"><svg width="22" height="22" viewBox="0 0 32 32" fill="none"><rect x="4" y="4" width="24" height="24" rx="7" stroke="url(#igc)" stroke-width="2" fill="none"/><circle cx="16" cy="16" r="5.5" stroke="url(#igc)" stroke-width="2" fill="none"/><circle cx="22.5" cy="9.5" r="1.5" fill="#C13584"/><defs><linearGradient id="igc" x1="4" y1="28" x2="28" y2="4"><stop offset="0%" stop-color="#FFDC80"/><stop offset="40%" stop-color="#F77737"/><stop offset="100%" stop-color="#833AB4"/></linearGradient></defs></svg></div><div class="cinfo"><strong>إنستغرام</strong><a href="https://www.instagram.com/Mymazingstore" target="_blank" rel="noopener">@Mymazingstore</a></div></div>
       </div>
       <div class="cocard">
         <h3>معلومات مفيدة</h3>
@@ -475,27 +548,21 @@ footer{background:var(--ink);padding:36px 5%;text-align:center;}
 <!-- ═══ PRIVACY ═══ -->
 <div id="privacy" class="page">
   <section class="section">
-    <div class="shead">
-      <p class="stag">القانونية</p>
-      <h2 class="stitle">سياسة الخصوصية</h2>
-      <p class="ssub">آخر تحديث: يناير 2025</p>
-    </div>
+    <div class="shead"><p class="stag">القانونية</p><h2 class="stitle">سياسة الخصوصية</h2></div>
     <div class="pbox">
       <h3>1. مقدمة</h3>
       <p>يلتزم متجر Mymazing Store بحماية خصوصية عملائنا. تصف هذه السياسة كيفية جمع معلوماتك الشخصية واستخدامها وحمايتها.</p>
       <h3>2. التواصل عبر واتساب</h3>
       <div class="wanote">We may contact customers via WhatsApp for order updates, delivery tracking, and customer support. Messages are sent only after the customer initiates contact or provides explicit consent.</div>
-      <p>نستخدم واتساب حصرياً لتأكيد الطلبات ومتابعة التوصيل ودعم العملاء. لن نرسل رسائل تسويقية إلا بموافقة صريحة.</p>
+      <p>نستخدم واتساب حصرياً لتأكيد الطلبات ومتابعة التوصيل ودعم العملاء.</p>
       <h3>3. المعلومات التي نجمعها</h3>
       <ul><li>الاسم الكامل ورقم الهاتف عند الطلب</li><li>العنوان والولاية لأغراض التوصيل</li><li>تفاصيل الطلب والتخصيص المطلوب</li></ul>
-      <h3>4. كيف نستخدم معلوماتك</h3>
-      <ul><li>معالجة طلباتك وتأكيدها</li><li>إرسال تحديثات التوصيل عبر واتساب</li><li>الرد على استفساراتك</li></ul>
-      <h3>5. مشاركة المعلومات</h3>
+      <h3>4. مشاركة المعلومات</h3>
       <p>نشارك معلوماتك فقط مع ZRexpress لإتمام الشحن. لن نبيع بياناتك أبداً لأطراف ثالثة.</p>
-      <h3>6. موافقة واتساب — Opt-in</h3>
+      <h3>5. موافقة واتساب — Opt-in</h3>
       <p>بتواصلك معنا توافق على تلقي تحديثات طلبك. يمكنك إلغاء الاشتراك بإرسال "إلغاء" على واتساب في أي وقت.</p>
-      <h3>7. التواصل بخصوص الخصوصية</h3>
-      <p>للاستفسارات: <a href="/cdn-cgi/l/email-protection#22414d4c56434156624f5b4f43584b4c4551564d50470c414d4f" style="color:var(--wood)"><span class="__cf_email__" data-cfemail="e5868a8b91848691a5889c88849f8c8b8296918a9780cb868a88">[email&#160;protected]</span></a></p>
+      <h3>6. التواصل</h3>
+      <p><a href="/cdn-cgi/l/email-protection#2f4c40415b4e4c5b6f4256424e554641485c5b405d4a014c4042" style="color:var(--wood)"><span class="__cf_email__" data-cfemail="8fece0e1fbeeecfbcfe2f6e2eef5e6e1e8fcfbe0fdeaa1ece0e2">[email&#160;protected]</span></a></p>
     </div>
   </section>
 </div>
@@ -504,6 +571,11 @@ footer{background:var(--ink);padding:36px 5%;text-align:center;}
 <footer>
   <div class="flogo">Mymazing <span>Store</span></div>
   <div class="fdesc">ديكور غرفة الصغير بمواد طبيعية وآمنة — الجزائر 🇩🇿</div>
+  <div class="fsocial">
+    <a href="https://www.facebook.com/Mymazingstore" target="_blank" rel="noopener"><svg width="34" height="34" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="7" fill="#1877F2"/><path d="M21 16h-3v9h-4v-9h-2v-3h2v-2c0-2.2 1.3-4 4-4h3v3h-2c-.6 0-1 .4-1 1v2h3l-.5 3z" fill="white"/></svg></a>
+    <a href="https://www.instagram.com/Mymazingstore" target="_blank" rel="noopener"><svg width="34" height="34" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="7" fill="url(#ig2)"/><rect x="9" y="9" width="14" height="14" rx="4" stroke="white" stroke-width="1.8" fill="none"/><circle cx="16" cy="16" r="4" stroke="white" stroke-width="1.8" fill="none"/><circle cx="21" cy="11" r="1" fill="white"/><defs><linearGradient id="ig2" x1="0" y1="32" x2="32" y2="0"><stop offset="0%" stop-color="#FFDC80"/><stop offset="50%" stop-color="#F77737"/><stop offset="100%" stop-color="#833AB4"/></linearGradient></defs></svg></a>
+    <a href="https://wa.me/213791813593" target="_blank" rel="noopener"><svg width="34" height="34" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="7" fill="#25D366"/><path d="M16 7C11 7 7 11 7 16c0 1.6.4 3.1 1.2 4.5L7 25l4.7-1.2C13 24.6 14.5 25 16 25c5 0 9-4 9-9s-4-9-9-9zm4.4 12.5c-.2.5-1 1-1.5 1-.4 0-.8.1-2.5-.5s-2.8-2.2-2.9-2.3c-.1-.1-1-1.3-1-2.5s.6-1.8.9-2c.2-.2.5-.3.7-.3h.5c.2 0 .4.1.5.4l.7 1.8c.1.2 0 .4-.1.6l-.4.5c-.1.1-.2.3-.1.5.4.7.9 1.3 1.5 1.8.5.4 1.1.7 1.7.9.2.1.4 0 .5-.1l.5-.6c.1-.2.3-.2.5-.1l1.8.8c.2.1.3.3.3.5v.6z" fill="white"/></svg></a>
+  </div>
   <div class="flinks">
     <a href="#" onclick="showPage('home');return false;">الرئيسية</a>
     <a href="#" onclick="showPage('catalog');return false;">المنتجات</a>
@@ -516,13 +588,12 @@ footer{background:var(--ink);padding:36px 5%;text-align:center;}
 </footer>
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-// Products data — أسماء الصور حسب المجلد
 const P={
-  loha:{img:'images/loha.jpg',name:'لوحة اسم خشبية',desc:'لوحة خشبية منقوشة بتقنية Laser Cut تحمل اسم طفلك بخط جميل. مصنوعة من خشب طبيعي عالي الجودة.',sizes:[{n:'صغير',d:'20×15 سم',p:'1800 دج'},{n:'متوسط',d:'30×20 سم',p:'2500 دج'},{n:'كبير',d:'40×30 سم',p:'3500 دج'}]},
+  loha:{img:'images/loha.jpg',name:'لوحة اسم خشبية',desc:'لوحة خشبية منقوشة بتقنية Laser Cut CO2 تحمل اسم طفلك بخط جميل. مصنوعة من خشب طبيعي عالي الجودة.',sizes:[{n:'صغير',d:'20×15 سم',p:'1800 دج'},{n:'متوسط',d:'30×20 سم',p:'2500 دج'},{n:'كبير',d:'40×30 سم',p:'3500 دج'}]},
   mawaled:{img:'images/mawaled.jpg',name:'باقة مواليد',desc:'هدية لا تُنسى للمواليد — مجموعة ديكور متكاملة تحتوي اسم الطفل وتاريخ الميلاد ولوحة تهنئة مخصصة.',sizes:[{n:'أساسية',d:'اسم + تاريخ',p:'3500 دج'},{n:'متكاملة',d:'اسم + تاريخ + تهنئة',p:'5500 دج'}]},
   dekor:{img:'images/dekor.jpg',name:'ديكور جدار الغرفة',desc:'مجموعة قطع ديكور خشبية متناسقة تحول جدار غرفة طفلك لتحفة فنية.',sizes:[{n:'صغير',d:'3-4 قطع',p:'4000 دج'},{n:'كبير',d:'6-8 قطع',p:'7000 دج'}]},
   masba7:{img:'images/masba7.jpg',name:'مصباح الجدار',desc:'إضاءة خشبية مميزة تضيف دفئاً وجمالاً لغرفة الصغير. تصاميم متنوعة حسب الطلب.',sizes:[{n:'حسب الطلب',d:'يحدد بعد المناقشة',p:'تواصل معنا'}]},
-  'custom-p':{img:'images/custom.jpg',name:'تصميم حسب الطلب',desc:'أرسل لنا فكرتك ونحولها لقطعة فنية خشبية مميزة بتقنية Laser Cut. لا حدود للإبداع.',sizes:[{n:'حسب التصميم',d:'يحدد بعد المناقشة',p:'تواصل معنا'}]}
+  'custom-p':{img:'images/custom.jpg',name:'تصميم حسب الطلب',desc:'أرسل لنا فكرتك ونحولها لقطعة فنية خشبية مميزة. لا حدود للإبداع.',sizes:[{n:'حسب التصميم',d:'يحدد بعد المناقشة',p:'تواصل معنا'}]}
 };
 let sel={};
 
@@ -531,73 +602,36 @@ function showPage(id){
   const el=document.getElementById(id);
   if(el){el.classList.add('active');window.scrollTo({top:0,behavior:'smooth'});}
 }
-
-function toggleMenu(){
-  document.getElementById('mmenu').classList.toggle('open');
-}
-
+function toggleMenu(){document.getElementById('mmenu').classList.toggle('open');}
 function showDetail(key){
-  const p=P[key]; if(!p)return;
-  sel[key]=0;
-  const sizes=p.sizes.map((s,i)=>`<div class="sopt${i===0?' active':''}" onclick="selSize('${key}',${i},this)"><b>${s.n}</b><small>${s.d}</small><strong>${s.p}</strong></div>`).join('');
-  document.getElementById('detailContent').innerHTML=`
-    <div><div class="dvisual"><img src="${p.img}" alt="${p.name}"></div></div>
-    <div class="dinfo">
-      <h1>${p.name}</h1>
-      <p class="ddesc">${p.desc}</p>
-      <p class="stitle2">اختر المقاس</p>
-      <div class="sgrid">${sizes}</div>
-      <div class="dnote">✏️ جميع المنتجات قابلة للتخصيص باسم الطفل — الخشب الطبيعي هو الخيار الافتراضي</div>
-      <button class="btn btn-wa btn-full" onclick="orderDetail('${key}')">💬 اطلب هذا المنتج عبر واتساب</button>
-    </div>`;
+  const p=P[key];if(!p)return;sel[key]=0;
+  const sz=p.sizes.map((s,i)=>`<div class="sopt${i===0?' active':''}" onclick="selSize('${key}',${i},this)"><b>${s.n}</b><small>${s.d}</small><strong>${s.p}</strong></div>`).join('');
+  document.getElementById('detailContent').innerHTML=`<div><div class="dvisual"><img src="${p.img}" alt="${p.name}" loading="lazy"></div></div><div class="dinfo"><h1>${p.name}</h1><p class="ddesc">${p.desc}</p><p class="stitle2">اختر المقاس</p><div class="sgrid">${sz}</div><div class="dnote">✏️ جميع المنتجات قابلة للتخصيص باسم الطفل — الخشب الطبيعي هو الخيار الافتراضي</div><button class="btn btn-wa btn-full" onclick="orderDetail('${key}')">💬 اطلب هذا المنتج عبر واتساب</button></div>`;
   showPage('detail');
 }
-
-function selSize(key,idx,el){
-  sel[key]=idx;
-  el.closest('.sgrid').querySelectorAll('.sopt').forEach(o=>o.classList.remove('active'));
-  el.classList.add('active');
-}
-
+function selSize(key,idx,el){sel[key]=idx;el.closest('.sgrid').querySelectorAll('.sopt').forEach(o=>o.classList.remove('active'));el.classList.add('active');}
 function orderDetail(key){
-  const p=P[key]; const s=p.sizes[sel[key]||0];
+  const p=P[key];const s=p.sizes[sel[key]||0];
   const msg=`🛍️ طلب من Mymazing Store\n\n📦 المنتج: ${p.name}\n📐 المقاس: ${s.n} (${s.d})\n💰 السعر: ${s.p}\n\nأرجو تأكيد الطلب. شكراً!`;
   window.open(`https://wa.me/213791813593?text=${encodeURIComponent(msg)}`,'_blank');
 }
-
 function waOrder(name){
   const msg=`🛍️ طلب من Mymazing Store\n\n📦 المنتج: ${name}\n\nأرجو الاستفسار عن المقاسات والأسعار. شكراً!`;
   window.open(`https://wa.me/213791813593?text=${encodeURIComponent(msg)}`,'_blank');
 }
-
 function updatePreview(){
-  const n=document.getElementById('cName').value;
-  const c=document.getElementById('cChild').value;
-  const pr=document.getElementById('cProduct').value;
-  const sz=document.getElementById('cSize').value;
-  const w=document.getElementById('cWilaya').value;
-  const nt=document.getElementById('cNotes').value;
+  const n=document.getElementById('cName').value,c=document.getElementById('cChild').value,pr=document.getElementById('cProduct').value;
+  const sz=document.getElementById('cSize').value,w=document.getElementById('cWilaya').value,nt=document.getElementById('cNotes').value;
   if(!n&&!c&&!pr){document.getElementById('previewText').textContent='سيظهر هنا ملخص طلبك...';return;}
   let msg='🛍️ طلب مخصص — Mymazing Store\n';
-  if(n)msg+=`👤 الاسم: ${n}\n`;
-  if(c)msg+=`✏️ اسم الطفل: ${c}\n`;
-  if(pr)msg+=`📦 المنتج: ${pr}\n`;
-  if(sz)msg+=`📐 المقاس: ${sz}\n`;
-  if(w)msg+=`📍 الولاية: ${w}\n`;
-  if(nt)msg+=`📝 ملاحظات: ${nt}\n`;
+  if(n)msg+=`👤 الاسم: ${n}\n`;if(c)msg+=`✏️ اسم الطفل: ${c}\n`;if(pr)msg+=`📦 المنتج: ${pr}\n`;
+  if(sz)msg+=`📐 المقاس: ${sz}\n`;if(w)msg+=`📍 الولاية: ${w}\n`;if(nt)msg+=`📝 ملاحظات: ${nt}\n`;
   msg+='\nأرجو تأكيد الطلب وإرسال السعر النهائي.';
   document.getElementById('previewText').textContent=msg;
 }
-
 function sendOrder(){
-  const n=document.getElementById('cName').value.trim();
-  const c=document.getElementById('cChild').value.trim();
-  const pr=document.getElementById('cProduct').value;
-  const op=document.getElementById('cOptin').checked;
+  const n=document.getElementById('cName').value.trim(),c=document.getElementById('cChild').value.trim(),pr=document.getElementById('cProduct').value,op=document.getElementById('cOptin').checked;
   if(!n||!c||!pr){alert('يرجى ملء: اسمك + اسم الطفل + نوع المنتج');return;}
   if(!op){alert('يرجى الموافقة على شروط التواصل');return;}
-  const sz=document.getElementById('cSize').value;
-  const w=document.getElementById('cWilaya').value;
-  const nt=document.getElementById('cNotes').value;
-  let msg='🛍️ طلب مخصص — Mymazing Store\n';
- 
+  const sz=document.getElementById('cSize').value,w=document.getElementById('cWilaya').value,nt=document.getElementById('cNotes').value;
+  let msg=`🛍️ طلب مخصص — Mymazi
