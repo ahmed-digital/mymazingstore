@@ -41,28 +41,28 @@ ul{list-style:none;}
 button{font-family:'Cairo',sans-serif;cursor:pointer;border:none;}
 img{display:block;max-width:100%;}
 
-/* NAV */
-nav{position:fixed;top:0;right:0;left:0;z-index:200;background:rgba(253,248,242,.97);backdrop-filter:blur(16px);border-bottom:1px solid rgba(200,130,74,.12);height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 5%;direction:ltr;}
-.logo{font-family:'Tajawal',sans-serif;font-weight:900;font-size:20px;color:var(--wood-dk);display:flex;align-items:center;gap:8px;direction:ltr;}
+/* TOPBAR */
+.topbar{position:fixed;top:0;right:0;left:0;z-index:201;height:50px;background:rgba(253,248,242,.98);backdrop-filter:blur(12px);border-bottom:1px solid rgba(200,130,74,.1);display:flex;align-items:center;justify-content:space-between;padding:0 5%;direction:ltr;}
+.logo{font-family:'Tajawal',sans-serif;font-weight:900;font-size:20px;color:var(--wood-dk);display:flex;align-items:center;gap:8px;background:none;border:none;cursor:pointer;direction:ltr;}
+.logo span{color:var(--wood);}
 .logo-dot{width:8px;height:8px;background:var(--wood);border-radius:50%;}
-.nav-right{display:flex;align-items:center;gap:8px;direction:ltr;}
-.nav-links{display:flex;gap:4px;align-items:center;direction:rtl;}
-.nav-links button{font-size:13px;font-weight:600;color:var(--muted);padding:7px 13px;border-radius:100px;transition:all .2s;background:none;border:none;cursor:pointer;font-family:'Cairo',sans-serif;}
-.nav-links button:hover{background:rgba(200,130,74,.1);color:var(--wood-dk);}
-.nav-wa{background:var(--wa)!important;color:var(--white)!important;border-radius:100px;padding:7px 13px;font-size:13px;font-weight:700;font-family:'Cairo',sans-serif;cursor:pointer;border:none;}
-.nav-wa:hover{background:var(--wa-dk)!important;}
-.nav-social{display:flex;gap:7px;align-items:center;}
-.nav-social a{width:30px;height:30px;border-radius:7px;display:flex;align-items:center;justify-content:center;transition:transform .2s;opacity:.85;}
-.nav-social a:hover{transform:translateY(-2px);opacity:1;}
-.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none;}
+.topbar-social{display:flex;gap:7px;align-items:center;}
+.topbar-social a{width:30px;height:30px;border-radius:7px;display:flex;align-items:center;justify-content:center;opacity:.85;transition:all .2s;}
+.topbar-social a:hover{opacity:1;transform:translateY(-2px);}
+
+/* NAVBAR */
+nav{position:fixed;top:50px;right:0;left:0;z-index:200;height:46px;background:rgba(253,248,242,.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(200,130,74,.12);display:flex;align-items:center;justify-content:center;gap:4px;padding:0 5%;}
+.navbtn{font-size:13px;font-weight:600;color:var(--muted);padding:6px 14px;border-radius:100px;background:none;border:none;cursor:pointer;font-family:'Cairo',sans-serif;transition:all .2s;white-space:nowrap;}
+.navbtn:hover{background:rgba(200,130,74,.1);color:var(--wood-dk);}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none;margin-right:auto;}
 .burger span{width:22px;height:2px;background:var(--ink);border-radius:2px;display:block;}
-.mmenu{display:none;position:fixed;top:64px;right:0;left:0;z-index:199;background:rgba(253,248,242,.98);border-bottom:1px solid rgba(200,130,74,.15);padding:10px 5%;flex-direction:column;gap:2px;}
+.mmenu{display:none;position:fixed;top:96px;right:0;left:0;z-index:199;background:rgba(253,248,242,.98);border-bottom:1px solid rgba(200,130,74,.15);padding:10px 5%;flex-direction:column;gap:2px;}
 .mmenu a,.mmenu button{display:block;width:100%;text-align:right;padding:10px 14px;font-size:14px;font-weight:700;color:var(--muted);border-radius:8px;background:none;border:none;cursor:pointer;font-family:'Cairo',sans-serif;}
 .mmenu a:hover,.mmenu button:hover{background:rgba(200,130,74,.08);color:var(--wood-dk);}
 .mmenu.open{display:flex;}
 
 /* PAGES */
-.page{display:none;padding-top:64px;min-height:100vh;}
+.page{display:none;padding-top:96px;min-height:100vh;}
 .page.active{display:block;}
 
 /* SECTION */
@@ -241,7 +241,7 @@ footer{background:var(--ink);padding:40px 5%;text-align:center;}
   .reviews-grid{grid-template-columns:1fr 1fr;}
 }
 @media(max-width:768px){
-  .nav-links,.nav-social{display:none;}
+  .navbtn{display:none;}
   .burger{display:flex;}
   .cats-grid{grid-template-columns:repeat(2,1fr);}
   .frow{grid-template-columns:1fr;}
@@ -255,33 +255,34 @@ footer{background:var(--ink);padding:40px 5%;text-align:center;}
 <body>
 
 <!-- NAV -->
-<nav>
-  <a href="javascript:void(0)" class="logo" onclick="showPage('home');return false;" style="direction:ltr;">
+<!-- TOPBAR: Logo + Social -->
+<div class="topbar">
+  <button class="logo" onclick="showPage('home')">
     <div class="logo-dot"></div>
-    Mymazing <span style="color:var(--wood)">Store</span>
-  </a>
-  <div class="nav-right">
-    <ul class="nav-links" id="navLinks">
-      <li><button onclick="showPage('home')">الرئيسية</button></li>
-      <li><button onclick="showPage('catalog')">المنتجات</button></li>
-      <li><button onclick="showPage('custom')">🎨 خصص طلبك</button></li>
-      <li><button onclick="showPage('about')">من نحن</button></li>
-      <li><button onclick="showPage('contact')">اتصل بنا</button></li>
-      <li><a href="https://wa.me/213791813593?text=مرحباً%20أريد%20الاستفسار" target="_blank" rel="noopener" class="nav-wa">💬 واتساب</a></li>
-    </ul>
-    <div class="nav-social">
-      <a href="https://www.facebook.com/Mymazingstore" target="_blank" rel="noopener" title="Facebook">
-        <svg width="30" height="30" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="7" fill="#1877F2"/><path d="M21 16h-3v9h-4v-9h-2v-3h2v-2c0-2.2 1.3-4 4-4h3v3h-2c-.6 0-1 .4-1 1v2h3l-.5 3z" fill="white"/></svg>
-      </a>
-      <a href="https://www.instagram.com/Mymazingstore" target="_blank" rel="noopener" title="Instagram">
-        <svg width="30" height="30" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="7" fill="url(#ig1)"/><rect x="9" y="9" width="14" height="14" rx="4" stroke="white" stroke-width="1.8" fill="none"/><circle cx="16" cy="16" r="4" stroke="white" stroke-width="1.8" fill="none"/><circle cx="21" cy="11" r="1" fill="white"/><defs><linearGradient id="ig1" x1="0" y1="32" x2="32" y2="0"><stop offset="0%" stop-color="#FFDC80"/><stop offset="50%" stop-color="#F77737"/><stop offset="100%" stop-color="#833AB4"/></linearGradient></defs></svg>
-      </a>
-      <a href="https://wa.me/213791813593" target="_blank" rel="noopener" title="WhatsApp">
-        <svg width="30" height="30" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="7" fill="#25D366"/><path d="M16 7C11 7 7 11 7 16c0 1.6.4 3.1 1.2 4.5L7 25l4.7-1.2C13 24.6 14.5 25 16 25c5 0 9-4 9-9s-4-9-9-9zm4.4 12.5c-.2.5-1 1-1.5 1-.4 0-.8.1-2.5-.5s-2.8-2.2-2.9-2.3c-.1-.1-1-1.3-1-2.5s.6-1.8.9-2c.2-.2.5-.3.7-.3h.5c.2 0 .4.1.5.4l.7 1.8c.1.2 0 .4-.1.6l-.4.5c-.1.1-.2.3-.1.5.4.7.9 1.3 1.5 1.8.5.4 1.1.7 1.7.9.2.1.4 0 .5-.1l.5-.6c.1-.2.3-.2.5-.1l1.8.8c.2.1.3.3.3.5v.6z" fill="white"/></svg>
-      </a>
-    </div>
-    <button class="burger" onclick="toggleMenu()" aria-label="قائمة"><span></span><span></span><span></span></button>
+    Mymazing <span>Store</span>
+  </button>
+  <div class="topbar-social">
+    <a href="https://www.facebook.com/Mymazingstore" target="_blank" rel="noopener" title="Facebook">
+      <svg width="30" height="30" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="7" fill="#1877F2"/><path d="M21 16h-3v9h-4v-9h-2v-3h2v-2c0-2.2 1.3-4 4-4h3v3h-2c-.6 0-1 .4-1 1v2h3l-.5 3z" fill="white"/></svg>
+    </a>
+    <a href="https://www.instagram.com/Mymazingstore" target="_blank" rel="noopener" title="Instagram">
+      <svg width="30" height="30" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="7" fill="url(#ig1)"/><rect x="9" y="9" width="14" height="14" rx="4" stroke="white" stroke-width="1.8" fill="none"/><circle cx="16" cy="16" r="4" stroke="white" stroke-width="1.8" fill="none"/><circle cx="21" cy="11" r="1" fill="white"/><defs><linearGradient id="ig1" x1="0" y1="32" x2="32" y2="0"><stop offset="0%" stop-color="#FFDC80"/><stop offset="50%" stop-color="#F77737"/><stop offset="100%" stop-color="#833AB4"/></linearGradient></defs></svg>
+    </a>
+    <a href="https://wa.me/213791813593" target="_blank" rel="noopener" title="WhatsApp">
+      <svg width="30" height="30" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="7" fill="#25D366"/><path d="M16 7C11 7 7 11 7 16c0 1.6.4 3.1 1.2 4.5L7 25l4.7-1.2C13 24.6 14.5 25 16 25c5 0 9-4 9-9s-4-9-9-9zm4.4 12.5c-.2.5-1 1-1.5 1-.4 0-.8.1-2.5-.5s-2.8-2.2-2.9-2.3c-.1-.1-1-1.3-1-2.5s.6-1.8.9-2c.2-.2.5-.3.7-.3h.5c.2 0 .4.1.5.4l.7 1.8c.1.2 0 .4-.1.6l-.4.5c-.1.1-.2.3-.1.5.4.7.9 1.3 1.5 1.8.5.4 1.1.7 1.7.9.2.1.4 0 .5-.1l.5-.6c.1-.2.3-.2.5-.1l1.8.8c.2.1.3.3.3.5v.6z" fill="white"/></svg>
+    </a>
   </div>
+</div>
+
+<!-- NAVBAR: Navigation links -->
+<nav>
+  <button class="navbtn" onclick="showPage('home')">الرئيسية</button>
+  <button class="navbtn" onclick="showPage('catalog')">المنتجات</button>
+  <button class="navbtn" onclick="showPage('custom')">🎨 خصص طلبك</button>
+  <button class="navbtn" onclick="showPage('about')">من نحن</button>
+  <button class="navbtn" onclick="showPage('contact')">اتصل بنا</button>
+  <button class="navbtn" onclick="showPage('privacy')">الخصوصية</button>
+  <button class="burger" onclick="toggleMenu()" aria-label="قائمة"><span></span><span></span><span></span></button>
 </nav>
 
 <!-- MOBILE MENU -->
