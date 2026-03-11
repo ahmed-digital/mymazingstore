@@ -76,7 +76,7 @@ img{display:block;max-width:100%;}
 .cats-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;}
 .cat-card{background:var(--cream);border-radius:14px;padding:16px 10px;text-align:center;cursor:pointer;transition:all .25s;border:1px solid rgba(200,130,74,.1);}
 .cat-card:hover{transform:translateY(-3px);box-shadow:0 8px 18px rgba(0,0,0,.08);border-color:var(--wood);}
-.cat-img{width:56px;height:56px;border-radius:12px;object-fit:cover;margin:0 auto 10px;}
+.cat-img{width:100%;height:120px;border-radius:10px;object-fit:cover;margin:0 auto 10px;}
 .cat-name{font-size:13px;font-weight:700;color:var(--ink);margin-bottom:2px;}
 .cat-sub{font-size:11px;color:var(--muted);}
 
@@ -457,7 +457,7 @@ footer{background:var(--ink);padding:36px 5%;text-align:center;}
       <div class="cocard">
         <h3>قنوات التواصل</h3>
         <div class="crow"><div class="cicon cwa">💬</div><div class="cinfo"><strong>واتساب</strong><a href="https://wa.me/213791813593" target="_blank" rel="noopener">+213 791 81 35 93</a></div></div>
-        <div class="crow"><div class="cicon cmail">📧</div><div class="cinfo"><strong>البريد الإلكتروني</strong><a href="mailto:contact@mymazingstore.com">contact@mymazingstore.com</a></div></div>
+        <div class="crow"><div class="cicon cmail">📧</div><div class="cinfo"><strong>البريد الإلكتروني</strong><a href="/cdn-cgi/l/email-protection#b5d6dadbc1d4d6c1f5d8ccd8d4cfdcdbd2c6c1dac7d09bd6dad8"><span class="__cf_email__" data-cfemail="dcbfb3b2a8bdbfa89cb1a5b1bda6b5b2bbafa8b3aeb9f2bfb3b1">[email&#160;protected]</span></a></div></div>
         <div class="crow"><div class="cicon cfb">📘</div><div class="cinfo"><strong>فيسبوك</strong><a href="https://www.facebook.com/Mymazingstore" target="_blank" rel="noopener">@Mymazingstore</a></div></div>
         <div class="crow"><div class="cicon cig">📸</div><div class="cinfo"><strong>إنستغرام</strong><a href="https://www.instagram.com/Mymazingstore" target="_blank" rel="noopener">@Mymazingstore</a></div></div>
       </div>
@@ -495,7 +495,7 @@ footer{background:var(--ink);padding:36px 5%;text-align:center;}
       <h3>6. موافقة واتساب — Opt-in</h3>
       <p>بتواصلك معنا توافق على تلقي تحديثات طلبك. يمكنك إلغاء الاشتراك بإرسال "إلغاء" على واتساب في أي وقت.</p>
       <h3>7. التواصل بخصوص الخصوصية</h3>
-      <p>للاستفسارات: <a href="mailto:contact@mymazingstore.com" style="color:var(--wood)">contact@mymazingstore.com</a></p>
+      <p>للاستفسارات: <a href="/cdn-cgi/l/email-protection#22414d4c56434156624f5b4f43584b4c4551564d50470c414d4f" style="color:var(--wood)"><span class="__cf_email__" data-cfemail="e5868a8b91848691a5889c88849f8c8b8296918a9780cb868a88">[email&#160;protected]</span></a></p>
     </div>
   </section>
 </div>
@@ -515,7 +515,7 @@ footer{background:var(--ink);padding:36px 5%;text-align:center;}
   <div class="fcopy">© 2025 Mymazing Store — جميع الحقوق محفوظة</div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // Products data
 const P={
   loha:{img:'images/loha.jpg',name:'لوحة اسم خشبية',desc:'لوحة خشبية منقوشة بتقنية Laser Cut تحمل اسم طفلك بخط جميل. مصنوعة من خشب طبيعي عالي الجودة.',sizes:[{n:'صغير',d:'20×15 سم',p:'1800 دج'},{n:'متوسط',d:'30×20 سم',p:'2500 دج'},{n:'كبير',d:'40×30 سم',p:'3500 دج'}]},
@@ -600,12 +600,4 @@ function sendOrder(){
   const w=document.getElementById('cWilaya').value;
   const nt=document.getElementById('cNotes').value;
   let msg='🛍️ طلب مخصص — Mymazing Store\n';
-  msg+=`👤 الاسم: ${n}\n✏️ اسم الطفل: ${c}\n📦 المنتج: ${pr}\n📐 المقاس: ${sz}\n`;
-  if(w)msg+=`📍 الولاية: ${w}\n`;
-  if(nt)msg+=`📝 ملاحظات: ${nt}\n`;
-  msg+='\nأرجو تأكيد الطلب وإرسال السعر النهائي.';
-  window.open(`https://wa.me/213791813593?text=${encodeURIComponent(msg)}`,'_blank');
-}
-</script>
-</body>
-</html>
+ 
